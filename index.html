@@ -9,21 +9,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script>
-            function hamburgerMenu() {
-                if (window.innerWidth < 768) {
-                    document.getElementById('header-links').style.display = 'none';
-                    document.getElementById('header-hamburger').style.display = 'flex';
-                    document.getElementById('footer-parent').style.flexDirection = 'column';
-                }
-                else {
-                    document.getElementById('header-links').style.display = 'flex';
-                    document.getElementById('header-hamburger').style.display = 'none';
-                    document.getElementById('footer-parent').style.flexDirection = 'row';
-                    document.getElementById("hamburger-overlay").style.display = "none";
-                    document.getElementById("hamburger-links").style.display = "none";
-                }
-            }
-
             function showHamburgerOverlay() {
                 document.getElementById("hamburger-overlay").style.display = "flex";
                 document.getElementById("hamburger-links").style.display = "flex";
@@ -35,7 +20,7 @@
             } 
         </script>
     </head>
-    <body onload="hamburgerMenu()" onresize="hamburgerMenu()">
+    <body>
         <header>
             <div class="header-parent">
                 <div class="header-logo">
