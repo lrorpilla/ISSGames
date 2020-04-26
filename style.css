@@ -63,8 +63,8 @@ body {
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 768px) {
     article {
-        padding-left: 12%;
-        padding-right: 12%;
+        padding-left: 4%;
+        padding-right: 4%;
     }
 
     article img {
