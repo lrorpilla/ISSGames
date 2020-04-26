@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script>
+
             function showHamburgerOverlay() {
                 document.getElementById("hamburger-overlay").style.display = "flex";
                 document.getElementById("hamburger-links").style.display = "flex";
@@ -20,7 +21,7 @@
             } 
         </script>
     </head>
-    <body>
+    <body onload="hamburgerMenu()" onresize="hamburgerMenu()">
         <header>
             <div class="header-parent">
                 <div class="header-logo">
@@ -50,58 +51,52 @@
                 </div>
             </div>
         </header>
-        
-        <section>
-            <div id="apolloContainer">
-                <video id="apolloLaunch" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-                <source src="images/apollo.mp4" type="video/mp4">
-                Sorry, your browser does not support HTML5 video.
-                </video>
-                <div id="apolloOverlayLogo">
-                    <!-- <div id="logo"><img src="images/20years.png"/></div> -->
-                </div>
-            </div>
 
-        <article>
-                <h1>What NASA is doing to keep COVID-19 off the space station</h1>
-                <h5><i>April 1, 2020</i></h5>
+        <div id="apolloContainer">
+            <video id="apolloLaunch" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+            <source src="images/apollo.mp4" type="video/mp4">
+            Sorry, your browser does not support HTML5 video.
+            </video>
+            <div id="apolloOverlayLogo">
+                <!-- <div id="logo"><img src="images/20years.png"/></div> -->
+            </div>
+        </div>
     
-                <div class="article-image" style="background-image: url('images/quarantine.jpg');"></div>
+        <section>
+
+        <div class="preview">
+            <div class="preview-image" style="background-image: url('images/quarantine.jpg');"></div>
+            
+                <h1>What NASA is doing to keep COVID-19 off station</h1>
+                <h5><i>April 1, 2020</i></h5>
     
                 <p>Three astronauts are scheduled to launch to the International Space Station (ISS) on April 9. They won’t return to Earth for six months. Instead, they’ll watch from the safety of outer space as a pandemic plays out some 250 miles (400 kilometers) beneath their feet.</p>
                 
-                <div class="read-more">
-                    <p style="text-align:right"><a href="#">Read more</a></p>
-                </div>
-    
-        </article>
+                <div class="read-more"><p style="text-align:right"><a href="#">Read story</a></p></div>    
+        </div>
 
-        <article>
+        <div class="preview">
+            <div class="preview-image" style="background-image: url('images/groundcontrol.jpg');"></div>
+
             <h1>Ground Control: A Journey Through Chess and Space</h1>
             <h5><i>November 7, 2019</i></h5>
 
-            <div class="article-image" style="background-image: url('images/groundcontrol.jpg');"></div>
             
-            <p>Organized in connection with the 50th anniversary of the Apollo 11 moon landing on July 16, 1969, Ground Control: A Journey Through Chess and Space showcases out-of-this-world artifacts from the collection of the World Chess Hall of Fame (WCHOF) and lenders Duncan Pohl and Allan Savage.</p>
-            <div class="read-more">
-                <p style="text-align:right"><a href="#">Read more</a></p>
+            
+            <p>Organized in connection with the 50th anniversary of the Apollo 11 moon landing on July 16, 1969, Ground Control: A Journey Through Chess and Space showcases out-of-this-world artifacts from the collection of the World Chess Hall of Fame (WCHOF).</p>
+            <div class="read-more"><p style="text-align:right"><a href="#">Read story</a></p></div>
+        </div>
 
-            </div>
-        </article>
+        <div class="preview">
+            <div class="preview-image" style="background-image: url('images/onboardchess.jpg');"></div>
 
-        <article>
             <h1>First Earth vs. Space Chess Match Ends – Earth Wins</h1>
             <h5><i>December 16, 2009</i></h5>
 
-            <div class="article-image" style="background-image: url('images/onboardchess.jpg');"></div>
-
-            <p>The first Earth vs. Space chess match, begun during astronaut Greg Chamitoff’s Expedition 17 stay aboard the International Space Station, is over – and the Earth won. </p>
+            <p>NASA and the U.S. Chess Federation (USCF) teamed up to host the match, which started in September 2008. Chamitoff conceded the match in a Dec. 16, 2009, letter to the third grade U.S. Chess Championship Team and its chess club teammates from Stevenson Elementary School in Bellevue, Wash.</p>
             
-            <div class="read-more">
-                <p style="text-align:right"><a href="#">Read more</a></p>
-            </div>
-
-        </article>
+            <div class="read-more"><p style="text-align:right"><a href="#">Read story</a></p></div>
+        </div>
 
         </section>
     
