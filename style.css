@@ -99,18 +99,19 @@ body {
     padding-top: 20px;
     justify-content: center;
     align-items: center;
-    width: 100%;
-}
-
-#about-team img {
-    width: 100%;
-    cursor: pointer;
 }
 
 .team-description {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.team-description img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
 }
 
  /* Extra small devices (phones, 600px and down) */
