@@ -59,6 +59,35 @@ body {
     text-align: center;
 }
 
+#apolloOverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: url('images/checkerboard.png');
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    top: 108px;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+#apolloOverlay h1 {
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 60;
+    color: white;
+}
+
+#apolloOverlay h2 {
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 20;
+    color: white;
+}
+
 #apolloLaunch {
     width: inherit;
     height: inherit;
@@ -99,6 +128,9 @@ body {
     padding-top: 20px;
     justify-content: center;
     align-items: center;
+    max-height: 250px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .team-description {
