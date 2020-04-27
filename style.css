@@ -1,4 +1,3 @@
-
 header {
     padding-left: 50px;
     padding-right: 50px;
@@ -96,12 +95,12 @@ body {
     -o-filter: blur(3px);
 }
 
-#picture-overlay { 
+#picture-overlay {
     display: none;
-    position : fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9);
     z-index: 10;
@@ -147,12 +146,12 @@ body {
 
 td {
     font-family: Roboto;
-    font-size: 14px;    
+    font-size: 14px;
 }
 
 th {
     font-family: Roboto Condensed;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 input {
@@ -183,23 +182,224 @@ table {
     cursor: pointer;
 }
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 768px) {
+.games-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.games-grid>div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.games-grid>div>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    margin: 5px;
+    height: 200px;
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+}
+
+.game h1 {
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 36px;
+}
+
+.game-chess {
+    background-image: url('images/game_chess.png');
+}
+
+.game-checkers {
+    background-image: url('images/game_checkers.png');
+}
+
+.game-battleship {
+    background-image: url('images/game_battleship.png');
+}
+
+.game-tictactoe {
+    background-image: url('images/game_tictactoe.png');
+}
+
+.game-chess:hover {
+    background-image: url('images/game_chess_hover.png');
+}
+
+.game-checkers:hover {
+    background-image: url('images/game_checkers_hover.png');
+}
+
+.game-battleship:hover {
+    background-image: url('images/game_battleship_hover.png');
+}
+
+.game-tictactoe:hover {
+    background-image: url('images/game_tictactoe_hover.png');
+}
+
+#scenario-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#scenario-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    padding: 5%;
+    max-width: 350px;
+    color: white;
+}
+
+#scenario-elements img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.preview-image img {
+    width: 100%;
+    height: auto;
+}
+
+#userBar {
+    width: 300px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+
+#passBar {
+    width: 300px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#login-button {
+    margin-bottom: 20px;
+}
+
+.member-tiers {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.member-tiers>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    cursor: pointer;
+}
+
+.member-tiers>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-tiers img {
+    width: 50%;
+    height: 50%;
+}
+
+.member-tiers h1 {
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.member-tiers p {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#tier-pawn {
+    background-image: url('images/tier_pawn.jpg');
+}
+
+#tier-rook {
+    background-image: url('images/tier_rook.jpg');
+}
+
+#tier-king {
+    background-image: url('images/tier_king.jpg');
+}
+
+#tier-pawn:hover {
+    background-image: url('images/tier_pawn_hover.jpg');
+}
+
+#tier-rook:hover {
+    background-image: url('images/tier_rook_hover.jpg');
+}
+
+#tier-king:hover {
+    background-image: url('images/tier_king_hover.jpg');
+}
+
+#discountBar {
+    height: 35px;
+    background-color: black;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    color: white;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 768px) {
     article {
         padding-left: 4%;
         padding-right: 4%;
     }
-
     article img {
         width: 50%;
         height: auto;
     }
-
     .preview {
         padding-left: 4%;
         padding-right: 4%;
     }
-
     .preview-image {
         background-size: cover;
         background-position: center;
@@ -208,189 +408,159 @@ table {
         width: auto;
         overflow: hidden;
     }
-
     #header-hamburger {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         width: 500px;
     }
-    
-    #hamburger-overlay { 
-        position : fixed; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
+    #hamburger-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.8);
         z-index: 10;
         display: none;
         flex-direction: column;
         justify-content: center;
-    } 
-    
-    
+    }
     #hamburger-links {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
-    
     #header-hamburger .fa {
         height: 30px;
         width: 30px;
         outline: none;
     }
-    
     #hamburger-links h3 {
         font-size: 28px;
     }
-    
     #header-links {
         display: none;
         justify-content: space-evenly;
         align-items: center;
         width: 500px;
     }
-    
     #footer-parent {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
-
     .eventParent {
         display: flex;
         flex-direction: column;
     }
-    
     .upcomingEvents {
         flex: 5 1;
     }
-    
     .eventFilters {
         flex: 1 5;
     }
-
     .filter-row {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
- }
- 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 768px) {
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 768px) {
     section {
         display: flex;
         justify-content: center;
         max-width: 100%;
         overflow: hidden;
     }
-    
     article {
         padding-left: 20%;
         padding-right: 20%;
     }
-
     article img {
         width: 30%;
         min-width: 300px;
         height: auto;
     }
-
     .preview {
         padding-left: 4%;
         padding-right: 4%;
         width: 100%;
     }
-
     .preview-image {
         margin-top: 20px;
         display: block;
         width: auto;
     }
-
-    .preview-image img {
-        width: 100%;
-        height: auto;
-    }
-
     #header-hamburger {
         display: none;
         justify-content: flex-end;
         align-items: center;
         width: 500px;
     }
-    
-    #hamburger-overlay { 
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
+    #hamburger-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.8);
         z-index: 10;
         display: none;
         flex-direction: column;
         justify-content: center;
-    } 
-    
-    
+    }
     #hamburger-links {
         display: none;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
-    
     #header-hamburger .fa {
         height: 30px;
         width: 30px;
         outline: none;
     }
-    
     #hamburger-links h3 {
         font-size: 28px;
     }
-    
     #header-links {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         width: 500px;
     }
-    
     #footer-parent {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-
     .eventParent {
         display: flex;
         flex-direction: row;
     }
-    
     .upcomingEvents {
         width: 100%;
+        max-width: 100%;
         flex: 3 1;
     }
-    
     .eventFilters {
         flex: 1 3;
         padding-left: 20px;
     }
-
     .filter-row {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
- }
+}
 
 .footer-logo {
     display: flex;
@@ -409,27 +579,88 @@ table {
     width: 100px;
 }
 
-.preview a:link { color: black; text-decoration: none}
-.preview a:visited { color: black; text-decoration: none}
-.preview a:active { color: black; text-decoration: none}
-.preview a:hover { color: black; text-decoration: none}
+.preview a:link {
+    color: black;
+    text-decoration: none
+}
 
-table a:link { color: black; text-decoration: underline}
-table a:visited { color: black; text-decoration: underline}
-table a:active { color: black; text-decoration: underline}
-table a:hover { color: black; text-decoration: underline}
+.preview a:visited {
+    color: black;
+    text-decoration: none
+}
 
-a:link { color: white; text-decoration: none}
-a:visited { color: white; text-decoration: none}
-a:active { color: white; text-decoration: none}
-a:hover { color: #C1C1C1; text-decoration: none}
+.preview a:active {
+    color: black;
+    text-decoration: none
+}
 
-.read-more a:link { color: #0000FF; text-decoration: underline }
-.read-more a:visited { color: #800080; text-decoration: underline }
-.read-more a:hover { color: #0000FF; text-decoration: underline }
-.read-more a:active { color: #FF0000; text-decoration: underline }
+.preview a:hover {
+    color: black;
+    text-decoration: none
+}
 
-p, ul {
+table a:link {
+    color: black;
+    text-decoration: underline
+}
+
+table a:visited {
+    color: black;
+    text-decoration: underline
+}
+
+table a:active {
+    color: black;
+    text-decoration: underline
+}
+
+table a:hover {
+    color: black;
+    text-decoration: underline
+}
+
+a:link {
+    color: white;
+    text-decoration: none
+}
+
+a:visited {
+    color: white;
+    text-decoration: none
+}
+
+a:active {
+    color: white;
+    text-decoration: none
+}
+
+a:hover {
+    color: #C1C1C1;
+    text-decoration: none
+}
+
+.read-more a:link {
+    color: #0000FF;
+    text-decoration: underline
+}
+
+.read-more a:visited {
+    color: #800080;
+    text-decoration: underline
+}
+
+.read-more a:hover {
+    color: #0000FF;
+    text-decoration: underline
+}
+
+.read-more a:active {
+    color: #FF0000;
+    text-decoration: underline
+}
+
+p,
+ul {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     text-align: justify;
@@ -466,7 +697,7 @@ h5 {
     height: 20px;
     width: 50px;
 }
-  
+
 .fa-facebook:hover {
     color: #4F79CC
 }
@@ -482,7 +713,7 @@ h5 {
 .fa-reddit:hover {
     color: #ff4301
 }
-  
+
 .fa-facebook {
     background: black;
     color: white;

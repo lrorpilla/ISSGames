@@ -6,10 +6,10 @@
         <title>ISS Games</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+        <script src="jquery-3.5.0.min.js"></script>
         <script>
             function showHamburgerOverlay() {
                 document.getElementById("hamburger-overlay").style.display = "flex";
@@ -20,7 +20,7 @@
                 document.getElementById("hamburger-overlay").style.display = "none";
                 document.getElementById("hamburger-links").style.display = "none";
             }
-            
+
             function setSearchBar(entry) {
                 // Search bar element in Events page.
                 searchBar = document.getElementById("searchBar");
@@ -32,7 +32,7 @@
                 // Table of events.
                 eventTable = document.getElementById("eventTable");
                 eventTable.scrollIntoView();
-                window.scrollBy(0, -100); 
+                window.scrollBy(0, -200);
             }
 
             // Seek for matches in an event table using the value in the search bar.
@@ -45,14 +45,14 @@
                 eventTable = document.getElementById("eventTable");
                 // Table of events.
                 queryCaption = document.getElementById("queryCaption");
-                
+
                 // Get the tags of the table: event, date and destination.
                 tags = eventTable.getElementsByTagName("tr");
                 // We can do this to make search case-insensitive.
                 results = searchBar.value.toLowerCase();
 
                 // Iterate through all the items in the table.
-                for (i = 0; i < tags.length; i++) {
+                for (var i = 0; i < tags.length; i++) {
                     // To be used as Boolean values.
                     var event, date, destination;
 
@@ -60,7 +60,7 @@
                     event = tags[i].getElementsByTagName("td")[0];
                     date = tags[i].getElementsByTagName("td")[1];
                     destination = tags[i].getElementsByTagName("td")[2];
-                    
+
                     // Check if event, date and destination mismatch. If not any, hide the result.
                     if (event || date || destination) {
                         if (event.textContent.toLowerCase().indexOf(results) > -1) {
@@ -75,10 +75,17 @@
                     }
                 }
 
+                if (results == "el0n1sg0d") {
+                    document.getElementById("top-text").innerHTML = "Yes.";
+                } else {
+                    document.getElementById("top-text").innerHTML = "Seek your future.";
+                }
+
                 if (results == "") {
                     queryCaption.innerHTML = "ALL UPCOMING EVENTS";
                 } else {
-                    queryCaption.innerHTML = "Searching for \"" + results + "\"";
+                    var resultHits = $('tr:visible').length - 1;
+                    queryCaption.innerHTML = "Searching for \"" + results + "\": " + resultHits + " matches found";
                 }
             }
         </script>
@@ -88,26 +95,38 @@
         <header>
             <div class="header-parent">
                 <div class="header-logo">
-                    <div><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+                    <div>
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    </div>
                 </div>
 
                 <div id="hamburger-overlay" onclick="hideHamburgerOverlay()">
                     <div id="hamburger-links">
-                        <div><a href="index.html">
+                        <div>
+                            <a href="index.html">
                                 <h3>home</h3>
-                            </a></div>
-                        <div><a href="about.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="about.html">
                                 <h3>about</h3>
-                            </a></div>
-                        <div><a href="events.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="events.html">
                                 <h3>events</h3>
-                            </a></div>
-                        <div><a href="games.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="games.html">
                                 <h3>games</h3>
-                            </a></div>
-                        <div><a href="membership.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="membership.html">
                                 <h3>membership</h3>
-                            </a></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -116,21 +135,31 @@
                 </div>
 
                 <div id="header-links">
-                    <div><a href="index.html">
+                    <div>
+                        <a href="index.html">
                             <h3>home</h3>
-                        </a></div>
-                    <div><a href="about.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="about.html">
                             <h3>about</h3>
-                        </a></div>
-                    <div><a href="events.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="events.html">
                             <h3>events</h3>
-                        </a></div>
-                    <div><a href="games.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="games.html">
                             <h3>games</h3>
-                        </a></div>
-                    <div><a href="membership.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="membership.html">
                             <h3>membership</h3>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -141,161 +170,165 @@
                 <div>&nbsp;</div>
                 <div>&nbsp;</div>
                 <div>&nbsp;</div>
-                <div><h1>Seek your future.</h1></div>
+                <div>
+                    <h1 id="top-text">Seek your future.</h1>
+                </div>
             </div>
         </div>
 
         <article>
-        <div class="eventParent">
-            <div class="upcomingEvents">
-            <h1>FIND AN EVENT</h1>
-            <input type="text" id="searchBar" onkeyup="eventSearch()" placeholder=" ⌕" title="Enter an event, date or description">
-            <div class="search-filter" onclick="setSearchBar('')"><p>Clear search filters</p></div>
+            <div class="eventParent">
+                <div class="upcomingEvents">
+                    <h1>FIND AN ISS EVENT</h1>
+                    <input type="text" id="searchBar" maxlength="60" onkeyup="eventSearch()" placeholder=" ⌕" title="Enter an event, date or description">
+                    <div class="search-filter" onclick="setSearchBar('')">
+                        <p>Clear search filters</p>
+                    </div>
 
-            <h1 id="queryCaption">ALL UPCOMING EVENTS</h1>
-            <table id="eventTable">
-                <tr>
-                    <th>Event</th>
-                    <th>Date</th>
-                    <th>Destination</th>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Solstice Checkers Tournament</a></td>
-                    <td>June 20</td>
-                    <td>Northern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Penumbral Chess Meet</a></td>
-                    <td>July 5</td>
-                    <td>Moon - Dark Side</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Opposition Battleship Tournament</a></td>
-                    <td>July 14</td>
-                    <td>Jupiter</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">New Moon Battleship Tournament</a></td>
-                    <td>July 20</td>
-                    <td>Moon - Light Side</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Rings Chess High-Stakes</a></td>
-                    <td>July 20</td>
-                    <td>Saturn</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Western Elongation Checkers Meet</a></td>
-                    <td>July 22</td>
-                    <td>Mercury</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Perseids Chess High-Stakes</a></td>
-                    <td>August 11</td>
-                    <td>Northern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Western Elongation Battleship Meet</a></td>
-                    <td>August 13</td>
-                    <td>Venus</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Full Moon Checkers Tournament</a></td>
-                    <td>September 2</td>
-                    <td>Moon - Dark Side</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Hyperdimension Tic-Tac-Toe</a></td>
-                    <td>September 11</td>
-                    <td>Neptune</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Equinox Checkers High-Stakes</a></td>
-                    <td>September 22</td>
-                    <td>The Sun</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Eastern Elongation Chess Meet</a></td>
-                    <td>October 1</td>
-                    <td>Mercury</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Draconids Battleship Meet</a></td>
-                    <td>October 7</td>
-                    <td>Northern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Opposition Tic-Tac-Toe Meet</a></td>
-                    <td>October 13</td>
-                    <td>Mars</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Orionids Tic-Tac-Toe Meet</a></td>
-                    <td>October 21</td>
-                    <td>Southern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Taurids Battleship High-Stakes</a></td>
-                    <td>October 29</td>
-                    <td>Southern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Full Moon Chess Tournament</a></td>
-                    <td>October 31</td>
-                    <td>Moon - Dark Side</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Blue-Green Invitational Chess</a></td>
-                    <td>October 31</td>
-                    <td>Uranus</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Western Elongation Battleship</a></td>
-                    <td>November 10</td>
-                    <td>Mercury</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Taurids Elongation Battleship</a></td>
-                    <td>November 11</td>
-                    <td>Northern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">New Moon Invitational Battleship</a></td>
-                    <td>November 15</td>
-                    <td>Moon - Light Side</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Penumbral Tic-Tac-Toe Meet</a></td>
-                    <td>November 30</td>
-                    <td>Moon - Dark Side</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Geminids Chess High-Stakes</a></td>
-                    <td>December 13</td>
-                    <td>Northern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Total Eclipse Battleship Meet</a></td>
-                    <td>December 14</td>
-                    <td>Southern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Solstice Checkers Invitational</a></td>
-                    <td>December 21</td>
-                    <td>Southern Hemisphere</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Conjunction Checkers Tournament - Prelims</a></td>
-                    <td>December 21</td>
-                    <td>Jupiter</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Conjunction Checkers Tournament - Finals</a></td>
-                    <td>December 21</td>
-                    <td>Saturn</td>
-                </tr>
-                <tr>
-                    <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Ursids Battleship Invitational</td>
+                    <h1 id="queryCaption">ALL UPCOMING EVENTS</h1>
+                    <table id="eventTable">
+                        <tr>
+                            <th>Event</th>
+                            <th>Date</th>
+                            <th>Destination</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Solstice Checkers Tournament</a></td>
+                            <td>June 20</td>
+                            <td>Northern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Penumbral Chess Meet</a></td>
+                            <td>July 5</td>
+                            <td>Moon - Dark Side</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Opposition Battleship Tournament</a></td>
+                            <td>July 14</td>
+                            <td>Jupiter</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">New Moon Battleship Tournament</a></td>
+                            <td>July 20</td>
+                            <td>Moon - Light Side</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Rings Chess High-Stakes</a></td>
+                            <td>July 20</td>
+                            <td>Saturn</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Western Elongation Checkers Meet</a></td>
+                            <td>July 22</td>
+                            <td>Mercury</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Perseids Chess High-Stakes</a></td>
+                            <td>August 11</td>
+                            <td>Northern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Western Elongation Battleship Meet</a></td>
+                            <td>August 13</td>
+                            <td>Venus</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Full Moon Checkers Tournament</a></td>
+                            <td>September 2</td>
+                            <td>Moon - Dark Side</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Hyperdimension Tic-Tac-Toe</a></td>
+                            <td>September 11</td>
+                            <td>Neptune</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Equinox Checkers High-Stakes</a></td>
+                            <td>September 22</td>
+                            <td>The Sun</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Eastern Elongation Chess Meet</a></td>
+                            <td>October 1</td>
+                            <td>Mercury</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Draconids Battleship Meet</a></td>
+                            <td>October 7</td>
+                            <td>Northern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Opposition Tic-Tac-Toe Meet</a></td>
+                            <td>October 13</td>
+                            <td>Mars</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Orionids Tic-Tac-Toe Meet</a></td>
+                            <td>October 21</td>
+                            <td>Southern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Taurids Battleship High-Stakes</a></td>
+                            <td>October 29</td>
+                            <td>Southern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Full Moon Chess Tournament</a></td>
+                            <td>October 31</td>
+                            <td>Moon - Dark Side</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Blue-Green Invitational Chess</a></td>
+                            <td>October 31</td>
+                            <td>Uranus</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Western Elongation Battleship</a></td>
+                            <td>November 10</td>
+                            <td>Mercury</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Taurids Elongation Battleship</a></td>
+                            <td>November 11</td>
+                            <td>Northern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">New Moon Invitational Battleship</a></td>
+                            <td>November 15</td>
+                            <td>Moon - Light Side</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Penumbral Tic-Tac-Toe Meet</a></td>
+                            <td>November 30</td>
+                            <td>Moon - Dark Side</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Geminids Chess High-Stakes</a></td>
+                            <td>December 13</td>
+                            <td>Northern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Total Eclipse Battleship Meet</a></td>
+                            <td>December 14</td>
+                            <td>Southern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Solstice Checkers Invitational</a></td>
+                            <td>December 21</td>
+                            <td>Southern Hemisphere</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Conjunction Checkers Tournament - Prelims</a></td>
+                            <td>December 21</td>
+                            <td>Jupiter</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Conjunction Checkers Tournament - Finals</a></td>
+                            <td>December 21</td>
+                            <td>Saturn</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="alert('Please log in if you wish to book for an event.')">Ursids Battleship Invitational</td>
                     <td>December 22</td>
                     <td>Southern Hemisphere</td>
                 </tr>
@@ -362,9 +395,9 @@
                     <a href="contact.html">
                         <h4>contact us</h4>
                     </a>
-                    <a href="privacy.html">
-                        <h4>privacy policy</h4>
-                    </a>
+                                <a href="privacy.html">
+                                    <h4>privacy policy</h4>
+                                </a>
                 </div>
 
                 <div class="footer-social">
@@ -375,10 +408,12 @@
                 </div>
 
                 <div class="footer-logo">
-                    <div><a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a></div>
+                    <div>
+                        <a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a>
+                    </div>
                 </div>
             </div>
-        </footer>
+            </footer>
     </body>
 
     </html>

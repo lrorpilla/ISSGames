@@ -1,88 +1,292 @@
 <doctype html>
     <html>
-        <head>
-            <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>ISS Games</title>
-            <link rel="stylesheet" href="style.css">
-            <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
-            <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap" rel="stylesheet"> 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-            <script>
-                function showHamburgerOverlay() {
-                    document.getElementById("hamburger-overlay").style.display = "flex";
-                    document.getElementById("hamburger-links").style.display = "flex";
+
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ISS Games</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            function showHamburgerOverlay() {
+                document.getElementById("hamburger-overlay").style.display = "flex";
+                document.getElementById("hamburger-links").style.display = "flex";
+            }
+
+            function hideHamburgerOverlay() {
+                document.getElementById("hamburger-overlay").style.display = "none";
+                document.getElementById("hamburger-links").style.display = "none";
+            }
+
+            function showBattleshipScenario() {
+                if (document.getElementById("status-battleship").innerHTML != "✓") {
+                    document.getElementById("scenario-overlay").style.display = "flex";
+                    document.getElementById("scenario-elements").style.display = "flex";
+                    document.getElementById("scenario-name").innerHTML = "BATTLESHIP SCENARIO";
+                    document.getElementById("scenario-description").innerHTML = "Lord Elon has a special superpower that he likes to exercise fairly during battleship games: heat vision. With his eyes that appear human, he will see through your board and instantly nail your ships without miss. Win this commemorative game in which Elon beat one of our masters, Tracy, so proudly and fairly at battleship by clicking on the position of his last great turn.";
+                    document.getElementById("scenario-image").src = "images/musk_battleship.png";
+                    document.getElementById("scenario-image").useMap = "#battleshipAnswer";
                 }
-    
-                function hideHamburgerOverlay() {
-                    document.getElementById("hamburger-overlay").style.display = "none";
-                    document.getElementById("hamburger-links").style.display = "none";
-                } 
-            </script>
-        </head>
-        <body>
-            <header>
-                <div class="header-parent">
-                    <div class="header-logo">
-                        <div><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
-                    </div>
-    
-                    <div id="hamburger-overlay" onclick="hideHamburgerOverlay()">
-                        <div id="hamburger-links">
-                            <div><a href="index.html"><h3>home</h3></a></div>
-                            <div><a href="about.html"><h3>about</h3></a></div>
-                            <div><a href="events.html"><h3>events</h3></a></div>
-                            <div><a href="games.html"><h3>games</h3></a></div>
-                            <div><a href="membership.html"><h3>membership</h3></a></div>
-                        </div>
-                    </div> 
-    
-                    <div id="header-hamburger">
-                        <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
-                    </div>
-                    
-                    <div id="header-links">
-                        <div><a href="index.html"><h3>home</h3></a></div>
-                        <div><a href="about.html"><h3>about</h3></a></div>
-                        <div><a href="events.html"><h3>events</h3></a></div>
-                        <div><a href="games.html"><h3>games</h3></a></div>
-                        <div><a href="membership.html"><h3>membership</h3></a></div>
+            }
+
+            function showChessScenario() {
+                if (document.getElementById("status-chess").innerHTML != "✓") {
+                    document.getElementById("scenario-overlay").style.display = "flex";
+                    document.getElementById("scenario-elements").style.display = "flex";
+                    document.getElementById("scenario-name").innerHTML = "CHESS SCENARIO";
+                    document.getElementById("scenario-image").src = "images/musk_chess.png";
+                    document.getElementById("scenario-description").innerHTML = "After a long match against Andrew, Elon was able to exploit his opponent's psychological weaknesses, forcing them to make a blunder on their previous move before the chessboard came to be this way. Click on the position that led Musk to win his 1000th checkmate.";
+                    document.getElementById("scenario-image").useMap = "#chessAnswer";
+                }
+            }
+
+            function showCheckersScenario() {
+                if (document.getElementById("status-checkers").innerHTML != "✓") {
+                    document.getElementById("scenario-overlay").style.display = "flex";
+                    document.getElementById("scenario-elements").style.display = "flex";
+                    document.getElementById("scenario-name").innerHTML = "CHECKERS SCENARIO";
+                    document.getElementById("scenario-image").src = "images/musk_checkers.png";
+                    document.getElementById("scenario-description").innerHTML = "Truth be told, Musk has no knowledge of checkers. Which is why this question is a mere trivia - click on a tile to perform an \"Old Faithful\", a popular starting move in the game, which not shortly afterwards led Elon to obliterate Christina's play with the AI that he so fairly made and competed with.";
+                    document.getElementById("scenario-image").useMap = "#checkersAnswer";
+                }
+            }
+
+            function showTicTacToeScenario() {
+                if (document.getElementById("status-tictactoe").innerHTML != "✓") {
+                    document.getElementById("scenario-overlay").style.display = "flex";
+                    document.getElementById("scenario-elements").style.display = "flex";
+                    document.getElementById("scenario-name").innerHTML = "TIC-TAC-TOE SCENARIO";
+                    document.getElementById("scenario-image").src = "images/musk_tictactoe.png";
+                    document.getElementById("scenario-description").innerHTML = "Nick was playing as X in this game, and was just about to earn his freedom and return back to Earth when he was interrupted making his last move. But afterwards, Elon started to debauch, \"Why are you hitting yourself, why are you hitting yourself?\", multiple times. Click on Elon's winning move that kept Nick in the ISS family for twenty more years.";
+                    document.getElementById("scenario-image").useMap = "#tictactoeAnswer";
+                }
+            }
+
+            function hideScenario() {
+                document.getElementById("scenario-overlay").style.display = "none";
+                document.getElementById("scenario-elements").style.display = "none";
+            }
+
+            function battleshipSuccess() {
+                hideScenario();
+                document.getElementById("status-battleship").innerHTML = "✓";
+                testAllDone();
+            }
+
+            function chessSuccess() {
+                hideScenario();
+                document.getElementById("status-chess").innerHTML = "✓";
+                testAllDone();
+            }
+
+            function checkersSuccess() {
+                hideScenario();
+                document.getElementById("status-checkers").innerHTML = "✓";
+                testAllDone();
+            }
+
+            function tictactoeSuccess() {
+                hideScenario();
+                document.getElementById("status-tictactoe").innerHTML = "✓";
+                testAllDone();
+            }
+
+            function testAllDone() {
+                done1 = (document.getElementById("status-battleship").innerHTML == "✓");
+                done2 = (document.getElementById("status-chess").innerHTML == "✓");
+                done3 = (document.getElementById("status-checkers").innerHTML == "✓");
+                done4 = (document.getElementById("status-tictactoe").innerHTML == "✓");
+
+                if (done1 && done2 && done3 && done4) {
+                    document.getElementById("top-text").innerHTML = "Who dares challenge me.";
+                    alert("Congratulations! You have solved all of our Elon's Greatest challenge scenarios.\nIf you're not up here in captivity - I mean, not dancing in festivity - then come join us at the ISS!\n\n A 10% discount will apply to your membership with the following code: EL0N1SG0D")
+                    document.getElementById("top-text").innerHTML = "Test your mettle.";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-parent">
+                <div class="header-logo">
+                    <div>
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                     </div>
                 </div>
-            </header>
 
-            <div id="apolloContainer">
-                <div class="top-image" style="background-image: url('images/games.jpg');"></div>
-                <div id="apolloOverlay">
-                    <div>&nbsp;</div>
-                    <div>&nbsp;</div>
-                    <div>&nbsp;</div>
-                    <div><h1>Test your mettle.</h1></div>
+                <div id="hamburger-overlay" onclick="hideHamburgerOverlay()">
+                    <div id="hamburger-links">
+                        <div>
+                            <a href="index.html">
+                                <h3>home</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="about.html">
+                                <h3>about</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="events.html">
+                                <h3>events</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="games.html">
+                                <h3>games</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="membership.html">
+                                <h3>membership</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="header-hamburger">
+                    <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
+                </div>
+
+                <div id="header-links">
+                    <div>
+                        <a href="index.html">
+                            <h3>home</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="about.html">
+                            <h3>about</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="events.html">
+                            <h3>events</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="games.html">
+                            <h3>games</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="membership.html">
+                            <h3>membership</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-            <section>
-                <p>Under Construction.</p>
-            </section>
-        
-            <footer>
-                <div id="footer-parent">
-                    <div class="footer-links">
-                        <a href="contact.html"><h4>contact us</h4></a>
-                        <a href="privacy.html"><h4>privacy policy</h4></a>
-                    </div>
-    
-                    <div class="footer-social">
-                        <a href="https://facebook.com" class="fa fa-facebook"></a>
-                        <a href="https://twitter.com" class="fa fa-twitter"></a>
-                        <a href="https://youtube.com" class="fa fa-instagram"></a>
-                        <a href="https://reddit.com" class="fa fa-reddit"></a>
-                    </div>
-                    
-                    <div class="footer-logo">
-                        <div><a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a></div>
+        </header>
+
+        <div id="apolloContainer">
+            <div class="top-image" style="background-image: url('images/games.jpg');"></div>
+            <div id="apolloOverlay">
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>
+                    <h1 id="top-text">Test your mettle.</h1>
+                </div>
+            </div>
+        </div>
+
+        <map name="battleshipAnswer">
+            <area shape="rect" coords="191,220,216,247" alt="Hit" style="cursor:pointer;" onclick="battleshipSuccess()">
+        </map>
+
+        <map name="chessAnswer">
+            <area shape="rect" coords="175,43,217,85" alt="Checkmate" style="cursor:pointer;" onclick="chessSuccess()">
+        </map>
+
+        <map name="checkersAnswer">
+            <area shape="rect" coords="175,131,218,174" alt="Faithful" style="cursor:pointer;" onclick="checkersSuccess()">
+        </map>
+
+        <map name="tictactoeAnswer">
+            <area shape="rect" coords="230,230,332,332" alt="Win" style="cursor:pointer;" onclick="tictactoeSuccess()">
+        </map>
+
+        <div id="scenario-overlay">
+
+            <div id="scenario-elements">
+                <div>
+                    <img src="images/logo_mini.png" alt="ISS Logo" style="max-width: 50px;">
+                    <h1 id="scenario-name"></h1>
+                    <img id="scenario-image">
+
+                    <div id="read-more" onclick="hideScenario()">
+                        <i><p id="scenario-description" style="font-size:12px;color:rgb(194, 194, 194);"></p></i>
+                        <a href="#/">
+                            <h2 id="close-button" style="text-align:center;font-weight:400;">[close scenario]</h2>
+                        </a>
                     </div>
                 </div>
-            </footer>
-        </body>
+            </div>
+        </div>
+
+        <article>
+            <h1>SELECT A GAME</h1>
+            <h5><i>Take your pick from one of four classic hits that we play regularly. Emerge victorious from a
+                    challenge scenario and you will be aptly rewarded. These are only a glimpse of the International
+                    Space Station Games Club's greatest and most historical moments.</i></h5>
+
+            <div class="games-grid">
+                <div class="game game-battleship" onclick="showBattleshipScenario()">
+                    <div>
+                        <h1 id="status-battleship">Battleship</h1>
+                    </div>
+                </div>
+                <div class="game game-chess" onclick="showChessScenario()">
+                    <div>
+                        <h1 id="status-chess">Chess</h1>
+                    </div>
+                </div>
+                <div class="game game-checkers" onclick="showCheckersScenario()">
+                    <div>
+                        <h1 id="status-checkers">Checkers</h1>
+                    </div>
+                </div>
+                <div class="game game-tictactoe" onclick="showTicTacToeScenario()">
+                    <div>
+                        <h1 id="status-tictactoe">Tic-Tac-Toe</h1>
+                    </div>
+                </div>
+            </div>
+
+            <p>At ISS Games, we play four main classic tabletop games: Battleship, Chess, Checkers and Tic-Tac-Toe. Each has their own difficulty and learning curve.</p>
+
+            <p>There are many more games that we play irregularly - should Lord Elon allow it. The moment we beat him (his AI stand-in) in any, those games are, in the same speed instantly banned from the roster. In addition, beating our lord and saviour
+                from any of the following games awards you a lifetime of servitude aboard the International Space Station - a rare honour.</p>
+        </article>
+
+        <footer>
+            <div id="footer-parent">
+                <div class="footer-links">
+                    <a href="contact.html">
+                        <h4>contact us</h4>
+                    </a>
+                    <a href="privacy.html">
+                        <h4>privacy policy</h4>
+                    </a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com" class="fa fa-twitter"></a>
+                    <a href="https://youtube.com" class="fa fa-instagram"></a>
+                    <a href="https://reddit.com" class="fa fa-reddit"></a>
+                </div>
+
+                <div class="footer-logo">
+                    <div>
+                        <a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
     </html>

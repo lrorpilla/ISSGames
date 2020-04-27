@@ -1,103 +1,259 @@
 <doctype html>
     <html>
-        <head>
-            <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>ISS Games</title>
-            <link rel="stylesheet" href="style.css">
-            <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
-            <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap" rel="stylesheet"> 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-            <script>
-                function hamburgerMenu() {
-                    if (window.innerWidth < 768) {
-                        document.getElementById('header-links').style.display = 'none';
-                        document.getElementById('header-hamburger').style.display = 'flex';
-                        document.getElementById('footer-parent').style.flexDirection = 'column';
-                    }
-                    else {
-                        document.getElementById('header-links').style.display = 'flex';
-                        document.getElementById('header-hamburger').style.display = 'none';
-                        document.getElementById('footer-parent').style.flexDirection = 'row';
-                        document.getElementById("hamburger-overlay").style.display = "none";
-                        document.getElementById("hamburger-links").style.display = "none";
-                    }
-                }
-    
-                function showHamburgerOverlay() {
-                    document.getElementById("hamburger-overlay").style.display = "flex";
-                    document.getElementById("hamburger-links").style.display = "flex";
-                }
-    
-                function hideHamburgerOverlay() {
+
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ISS Games</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            function hamburgerMenu() {
+                if (window.innerWidth < 768) {
+                    document.getElementById('header-links').style.display = 'none';
+                    document.getElementById('header-hamburger').style.display = 'flex';
+                    document.getElementById('footer-parent').style.flexDirection = 'column';
+                } else {
+                    document.getElementById('header-links').style.display = 'flex';
+                    document.getElementById('header-hamburger').style.display = 'none';
+                    document.getElementById('footer-parent').style.flexDirection = 'row';
                     document.getElementById("hamburger-overlay").style.display = "none";
                     document.getElementById("hamburger-links").style.display = "none";
-                } 
-            </script>
-        </head>
-        <body>
-            <header>
-                <div class="header-parent">
-                    <div class="header-logo">
-                        <div><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
-                    </div>
-    
-                    <div id="hamburger-overlay" onclick="hideHamburgerOverlay()">
-                        <div id="hamburger-links">
-                            <div><a href="index.html"><h3>home</h3></a></div>
-                            <div><a href="about.html"><h3>about</h3></a></div>
-                            <div><a href="events.html"><h3>events</h3></a></div>
-                            <div><a href="games.html"><h3>games</h3></a></div>
-                            <div><a href="membership.html"><h3>membership</h3></a></div>
-                        </div>
-                    </div> 
-    
-                    <div id="header-hamburger">
-                        <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
-                    </div>
-                    
-                    <div id="header-links">
-                        <div><a href="index.html"><h3>home</h3></a></div>
-                        <div><a href="about.html"><h3>about</h3></a></div>
-                        <div><a href="events.html"><h3>events</h3></a></div>
-                        <div><a href="games.html"><h3>games</h3></a></div>
-                        <div><a href="membership.html"><h3>membership</h3></a></div>
+                }
+            }
+
+            function showHamburgerOverlay() {
+                document.getElementById("hamburger-overlay").style.display = "flex";
+                document.getElementById("hamburger-links").style.display = "flex";
+            }
+
+            function hideHamburgerOverlay() {
+                document.getElementById("hamburger-overlay").style.display = "none";
+                document.getElementById("hamburger-links").style.display = "none";
+            }
+
+            function registration() {
+                alert("Registration is currently closed.");
+            }
+
+            function pawnHover() {
+                document.getElementById("join-text").innerHTML = "Small beginnings.";
+            }
+
+            function rookHover() {
+                document.getElementById("join-text").innerHTML = "A sizable upgrade.";
+            }
+
+            function kingHover() {
+                document.getElementById("join-text").innerHTML = "There can only be one.";
+            }
+
+            function login() {
+                document.getElementById("top-text").innerHTML = "Invalid credentials.";
+                document.getElementById("top-text").style.color = "#ff5237";
+                setTimeout(function() {
+                    document.getElementById("top-text").innerHTML = "Already an ISS member?";
+                    document.getElementById("top-text").style.color = "#ffffff";
+                }, 2000);
+
+
+            }
+
+            function reset() {
+
+                // Search bar element in Events page.
+                discountBar = document.getElementById("discountBar");
+
+                // We can do this to make search case-insensitive.
+                results = discountBar.value.toLowerCase();
+
+                if (results == "el0n1sg0d") {
+                    document.getElementById("join-text").innerHTML = "Promotion auto-applied.";
+                    document.getElementById("prom1").innerHTML = "$2,249/mo";
+                    document.getElementById("prom2").innerHTML = "$8,999/mo";
+                    document.getElementById("prom3").innerHTML = "$44,999/mo";
+                    document.getElementById("prom1").style.color = "#90ee90";
+                    document.getElementById("prom2").style.color = "#90ee90";
+                    document.getElementById("prom3").style.color = "#90ee90";
+                } else if (results == "") {
+                    document.getElementById("join-text").innerHTML = "Joining us?";
+                    document.getElementById("prom1").innerHTML = "$2,499/mo";
+                    document.getElementById("prom2").innerHTML = "$9,999/mo";
+                    document.getElementById("prom3").innerHTML = "$49,999/mo";
+                    document.getElementById("prom1").style.color = "#ffffff";
+                    document.getElementById("prom2").style.color = "#ffffff";
+                    document.getElementById("prom3").style.color = "#ffffff";
+                } else {
+                    document.getElementById("join-text").innerHTML = "Enter a valid code.";
+                    document.getElementById("prom1").innerHTML = "$2,499/mo";
+                    document.getElementById("prom2").innerHTML = "$9,999/mo";
+                    document.getElementById("prom3").innerHTML = "$49,999/mo";
+                    document.getElementById("prom1").style.color = "#ffffff";
+                    document.getElementById("prom2").style.color = "#ffffff";
+                    document.getElementById("prom3").style.color = "#ffffff";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-parent">
+                <div class="header-logo">
+                    <div>
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                     </div>
                 </div>
-            </header>
 
-            <div id="apolloContainer">
-                <div class="top-image" style="background-image: url('images/membership.jpg');"></div>
-                <div id="apolloOverlay">
-                    <div>&nbsp;</div>
-                    <div>&nbsp;</div>
-                    <div>&nbsp;</div>
-                    <div><h1>Propel yourself.</h1></div>
+                <div id="hamburger-overlay" onclick="hideHamburgerOverlay()">
+                    <div id="hamburger-links">
+                        <div>
+                            <a href="index.html">
+                                <h3>home</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="about.html">
+                                <h3>about</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="events.html">
+                                <h3>events</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="games.html">
+                                <h3>games</h3>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="membership.html">
+                                <h3>membership</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="header-hamburger">
+                    <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
+                </div>
+
+                <div id="header-links">
+                    <div>
+                        <a href="index.html">
+                            <h3>home</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="about.html">
+                            <h3>about</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="events.html">
+                            <h3>events</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="games.html">
+                            <h3>games</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="membership.html">
+                            <h3>membership</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-            <section>
-                <p>Under Construction.</p>
-            </section>
-        
-            <footer>
-                <div id="footer-parent">
-                    <div class="footer-links">
-                        <a href="contact.html"><h4>contact us</h4></a>
-                        <a href="privacy.html"><h4>privacy policy</h4></a>
+        </header>
+
+        <div id="apolloContainer">
+            <div class="top-image" style="background-image: url('images/membership.jpg');"></div>
+            <div id="apolloOverlay" style="justify-content: flex-end;">
+                <div>
+                    <h1 id="top-text">Already an ISS member?</h1>
+                </div>
+                <div><input type="text" id="userBar" maxlength="60" onkeyup="eventSearch()" placeholder=" 웃 Username" title="Enter your credentials"></div>
+                <div><input type="password" id="passBar" maxlength="60" onkeyup="eventSearch()" placeholder=" ⚿ Password" title="Enter your credentials"></div>
+                <div id="login-button" onclick="login()">
+                    <a href="#/"><img src="images/login.png" alt="Log In"></a>
+                </div>
+            </div>
+        </div>
+
+        <article>
+            <div>
+                <h1 id="join-text" style="font-family:Roboto;font-size:60;font-weight:100;color:black;text-align:center">Joining us?</h1>
+            </div>
+
+            <div class="member-tiers">
+                <div id="tier-pawn" onclick="registration()" onmouseover="pawnHover()" onmouseout="reset()">
+                    <div>
+                        <h1>Pawn</h1>
                     </div>
-    
-                    <div class="footer-social">
-                        <a href="https://facebook.com" class="fa fa-facebook"></a>
-                        <a href="https://twitter.com" class="fa fa-twitter"></a>
-                        <a href="https://youtube.com" class="fa fa-instagram"></a>
-                        <a href="https://reddit.com" class="fa fa-reddit"></a>
+                    <div>
+                        <p>✓ Access to ISS<br>✓ Ad-free terminal<br>✓ Unlimited games</p>
                     </div>
-                    
-                    <div class="footer-logo">
-                        <div><a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a></div>
+                    <div>
+                        <h5 id="prom1">$2,499/mo</h5>
                     </div>
                 </div>
-            </footer>
-        </body>
+                <div id="tier-rook" onclick="registration()" onmouseover="rookHover()" onmouseout="reset()">
+                    <div>
+                        <h1>Rook</h1>
+                    </div>
+                    <div>
+                        <p>✓ Access to ISS<br>✓ Ad-free terminal<br>✓ Unlimited games <br>✓ Exclusive lounge<br>✓ Planetary tours</p>
+                    </div>
+                    <div>
+                        <h5 id="prom2">$9,999/mo</h5>
+                    </div>
+                </div>
+                <div id="tier-king" onclick="registration()" onmouseover="kingHover()" onmouseout="reset()">
+                    <div>
+                        <h1>King</h1>
+                    </div>
+                    <div>
+                        <p>✓ Access to ISS<br>✓ Ad-free terminal<br>✓ Unlimited games <br>✓ Exclusive lounge<br>✓ Planetary tours<br>✓ Amnesty grant<br>✓ Elon's grace</p>
+                    </div>
+                    <div>
+                        <h5 id="prom3">$49,999/mo</h5>
+                    </div>
+                </div>
+            </div>
+
+            <input type="text" id="discountBar" maxlength="60" onkeyup="reset()" placeholder=" Have a valid discount or promotional code?" title="Enter a promotional code.">
+        </article>
+
+        <footer>
+            <div id="footer-parent">
+                <div class="footer-links">
+                    <a href="contact.html">
+                        <h4>contact us</h4>
+                    </a>
+                    <a href="privacy.html">
+                        <h4>privacy policy</h4>
+                    </a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com" class="fa fa-twitter"></a>
+                    <a href="https://youtube.com" class="fa fa-instagram"></a>
+                    <a href="https://reddit.com" class="fa fa-reddit"></a>
+                </div>
+
+                <div class="footer-logo">
+                    <div>
+                        <a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
     </html>
