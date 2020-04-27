@@ -148,6 +148,9 @@
         <article>
         <div class="eventParent">
             <div class="upcomingEvents">
+            <h1>FIND AN EVENT</h1>
+            <input type="text" id="searchBar" onkeyup="eventSearch()" placeholder=" ⌕" title="Enter an event, date or description">
+            <div class="search-filter" onclick="setSearchBar('')"><p>Clear search filters</p></div>
 
             <h1 id="queryCaption">ALL UPCOMING EVENTS</h1>
             <table id="eventTable">
@@ -304,11 +307,7 @@
             </table>
             </div>
             <div class="eventFilters">
-                <h1>FIND AN EVENT</h1>
-                <input type="text" id="searchBar" onkeyup="eventSearch()" placeholder=" ⌕" title="Enter an event, date or description">
-                <div class="search-filter" onclick="setSearchBar('')"><p>Clear search filters</p></div>
-
-                <h1>SEARCH FILTERS</h1>
+                <h1>FILTERS</h1>
 
                 <div class="filter-row">
                 <div>

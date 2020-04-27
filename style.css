@@ -263,7 +263,7 @@ table {
 
     .eventParent {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     
     .upcomingEvents {
