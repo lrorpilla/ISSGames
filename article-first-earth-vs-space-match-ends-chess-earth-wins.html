@@ -2,51 +2,21 @@
     <html>
 
     <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ISS Games</title>
+        <meta charset="utf-8" name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>ISS Games - Blog</title>
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <script>
-            function showHamburgerOverlay() {
-                document.getElementById("hamburger-overlay").style.display = "flex";
-                document.getElementById("hamburger-links").style.display = "flex";
-                document.documentElement.style.overflow = 'hidden';
-                document.body.scroll = "no";
-            }
-
-            function hideHamburgerOverlay() {
-                document.getElementById("hamburger-overlay").style.display = "none";
-                document.getElementById("hamburger-links").style.display = "none";
-                document.documentElement.style.overflow = 'scroll';
-                document.body.scroll = "yes";
-            }
-
-            function showPictureOverlay(object) {
-                document.documentElement.style.overflow = 'hidden';
-                document.body.scroll = "no";
-                document.getElementById("img-overlay").src = object.src;
-                document.getElementById("caption-overlay").innerHTML = object.alt;
-                document.getElementById("picture-overlay").style.display = "flex";
-                document.getElementById("picture-links").style.display = "flex";
-
-            }
-
-            function hidePictureOverlay() {
-                document.documentElement.style.overflow = 'scroll';
-                document.body.scroll = "yes";
-                document.getElementById("picture-overlay").style.display = "none";
-                document.getElementById("picture-links").style.display = "none";
-
-            }
-
-            function scrollToTop() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
+        <script type="text/javascript" src="functions.js"></script>
     </head>
 
     <body>
@@ -54,7 +24,8 @@
             <div class="header-parent">
                 <div class="header-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="images/logo.png"
+                                alt="logo"></a>
                     </div>
                 </div>
 
@@ -89,7 +60,8 @@
                 </div>
 
                 <div id="header-hamburger">
-                    <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
+                    <a href="#" onclick="showHamburgerOverlay()"
+                        class="fa fa-bars fa-2x"></a>
                 </div>
 
                 <div id="header-links">
@@ -122,15 +94,17 @@
             </div>
         </header>
 
-        <div id="apolloContainer">
-            <div class="top-image" style="background-image: url('images/onboardchess.jpg');"></div>
+        <div class="top-container">
+            <div class="top-image"
+                style="background-image: url('images/onboardchess.jpg');"></div>
         </div>
 
         <div id="picture-overlay" onclick="hidePictureOverlay()">
             <div id="picture-elements">
                 <div><img id="img-overlay"></div>
                 <div><i>
-                        <h5 id="caption-overlay" style="color:white; text-align:center;"></h5>
+                        <h5 id="caption-overlay"
+                            style="color:white; text-align:center;"></h5>
                     </i></div>
             </div>
         </div>
@@ -141,38 +115,93 @@
                     <h1>FIRST EARTH VS. SPACE MATCH ENDS - EARTH WINS</h1>
                     <h5><i>December 16, 2009</i></h5>
 
-                    <img src="images/greg.jpg" alt="Greg Chamitoff plays chess from inside the space station's Harmony module." style="float:right; margin-left:10px;" onclick="showPictureOverlay(this)">
+                    <img src="images/greg.jpg"
+                        alt="Greg Chamitoff plays chess from inside the space station's Harmony module."
+                        style="float:right; margin-left:10px;"
+                        onclick="showPictureOverlay(this)">
 
-                    <p>The first Earth vs. Space chess match, begun during astronaut Greg Chamitoff’s Expedition 17 stay aboard the International Space Station, is over – and the Earth won.</p>
+                    <p>The first Earth vs. Space chess match, begun during
+                        astronaut Greg Chamitoff’s Expedition 17 stay aboard the
+                        International Space Station, is over – and the Earth
+                        won.</p>
 
-                    <p>NASA and the U.S. Chess Federation (USCF) teamed up to host the match, which started in September 2008. Chamitoff conceded the match in a Dec. 16, 2009, letter to the third grade U.S. Chess Championship Team and its chess club teammates
-                        from Stevenson Elementary School in Bellevue, Wash. The USCF facilitated the match, coordinating worldwide voting on the Earth’s moves, which were proposed by the K-3 champions. </p>
+                    <p>NASA and the U.S. Chess Federation (USCF) teamed up to
+                        host the match, which started in September 2008.
+                        Chamitoff conceded the match in a Dec. 16, 2009, letter
+                        to the third grade U.S. Chess Championship Team and its
+                        chess club teammates
+                        from Stevenson Elementary School in Bellevue, Wash. The
+                        USCF facilitated the match, coordinating worldwide
+                        voting on the Earth’s moves, which were proposed by the
+                        K-3 champions. </p>
 
-                    <p>Chamitoff, who continued the match via e-mail after his 183-day space mission and return to Earth on Nov. 30, 2008, is scheduled to fly again on the upcoming STS-134 mission of Space Shuttle Endeavour. He sent the following letter
+                    <p>Chamitoff, who continued the match via e-mail after his
+                        183-day space mission and return to Earth on Nov. 30,
+                        2008, is scheduled to fly again on the upcoming STS-134
+                        mission of Space Shuttle Endeavour. He sent the
+                        following letter
                         to the students: </p>
 
-                    <i><p>Dear Stevenson Elementary Chess Team,</p>
+                    <i>
+                        <p>Dear Stevenson Elementary Chess Team,</p>
 
-                    <p>What a game! Huge congratulations on your victory! I'm truly proud of you, and inspired by your dedication, focus, brilliance, and patience too! Also, a huge congratulations to all of you who followed the game and participated as part of the “Earth Team,” by voting for the moves on-line. </p>
+                        <p>What a game! Huge congratulations on your victory!
+                            I'm truly proud of you, and inspired by your
+                            dedication, focus, brilliance, and patience too!
+                            Also, a huge congratulations to all of you who
+                            followed the game and participated as part of the
+                            “Earth Team,” by voting for the moves on-line. </p>
 
-                    <p>This was a fantastic game with so many intricate twists and turns. When the time between moves is measured in days, it seems that the depth of analysis and strategy happens at a different level. This made for a very exciting game! This wasn't the longest game ever played, but for sure it set a record for long distance!</p>
+                        <p>This was a fantastic game with so many intricate
+                            twists and turns. When the time between moves is
+                            measured in days, it seems that the depth of
+                            analysis and strategy happens at a different level.
+                            This made for a very exciting game! This wasn't the
+                            longest game ever played, but for sure it set a
+                            record for long distance!</p>
 
-                    <p>I wish we could have played the entire game between “Space” and “Earth” while I was still onboard the International Space Station, but perhaps there will be time for a complete “Earth vs Space” match one day, when some of you are living on the Moon or Mars. No doubt, that the game of chess will travel with us to the stars. But more importantly, it's terrific to see how the game of chess is inspiring so many young minds to think and work in ways that can prepare them for the roles they will play in building our future. </p>
+                        <p>I wish we could have played the entire game between
+                            “Space” and “Earth” while I was still onboard the
+                            International Space Station, but perhaps there will
+                            be time for a complete “Earth vs Space” match one
+                            day, when some of you are living on the Moon or
+                            Mars. No doubt, that the game of chess will travel
+                            with us to the stars. But more importantly, it's
+                            terrific to see how the game of chess is inspiring
+                            so many young minds to think and work in ways that
+                            can prepare them for the roles they will play in
+                            building our future. </p>
 
-                    <p>It's been a great honor for me to play a small part in that. Thanks to so many people from NASA, the U.S. Chess Federation, Stevenson Elementary, Bellevue College, the Seattle Museum of Flight, ChessMagnetSchool.com, and many others who made this game possible. May All Your Dreams Come True, </p>
+                        <p>It's been a great honor for me to play a small part
+                            in that. Thanks to so many people from NASA, the
+                            U.S. Chess Federation, Stevenson Elementary,
+                            Bellevue College, the Seattle Museum of Flight,
+                            ChessMagnetSchool.com, and many others who made this
+                            game possible. May All Your Dreams Come True, </p>
 
-                    <b><p>Greg Chamitoff</p>
-                
-                    <p>ISS Expedition 17/18 Flight Engineer and Science Officer</b></p></i>
+                        <b>
+                            <p>Greg Chamitoff</p>
 
-                    <p>The USCF, established in 1939, is the governing body for chess in the U.S. and is dedicated to extending the role of chess in American society. It promotes the study and knowledge of the game for its own sake and as a useful tool in
-                        the classroom for developing critical thinking and social skills. </p>
+                            <p>ISS Expedition 17/18 Flight Engineer and Science
+                                Officer
+                        </b></p>
+                    </i>
+
+                    <p>The USCF, established in 1939, is the governing body for
+                        chess in the U.S. and is dedicated to extending the role
+                        of chess in American society. It promotes the study and
+                        knowledge of the game for its own sake and as a useful
+                        tool in
+                        the classroom for developing critical thinking and
+                        social skills. </p>
 
                     <div class="read-more" onclick="scrollToTop()">
-                        <p style="text-align:center; padding-top:20px;"><a href="#">Scroll to top</a></p>
+                        <p style="text-align:center; padding-top:20px;"><a
+                                href="#">Scroll to top</a></p>
                     </div>
                     <div class="read-more" onclick="scrollToTop()">
-                        <p style="text-align:center"><a href="index.html">Return to home</a></p>
+                        <p style="text-align:center"><a href="index.html">Return
+                                to home</a></p>
                     </div>
                 </article>
             </div>
@@ -198,7 +227,8 @@
 
                 <div class="footer-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a>
+                        <a href="index.html"><img src="images/logo_mini.png"
+                                alt="logo_mini"></a>
                     </div>
                 </div>
             </div>

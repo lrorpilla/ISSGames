@@ -2,49 +2,21 @@
     <html>
 
     <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ISS Games</title>
+        <meta charset="utf-8" name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>ISS Games - Blog</title>
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <script>
-            function showHamburgerOverlay() {
-                document.getElementById("hamburger-overlay").style.display = "flex";
-                document.getElementById("hamburger-links").style.display = "flex";
-                document.documentElement.style.overflow = 'hidden';
-                document.body.scroll = "no";
-            }
-
-            function hideHamburgerOverlay() {
-                document.getElementById("hamburger-overlay").style.display = "none";
-                document.getElementById("hamburger-links").style.display = "none";
-                document.documentElement.style.overflow = 'scroll';
-                document.body.scroll = "yes";
-            }
-
-            function showPictureOverlay(object) {
-                document.getElementById("img-overlay").src = object.src;
-                document.getElementById("caption-overlay").innerHTML = object.alt;
-                document.getElementById("picture-overlay").style.display = "flex";
-                document.getElementById("picture-links").style.display = "flex";
-                document.documentElement.style.overflow = 'hidden';
-                document.body.scroll = "no";
-            }
-
-            function hidePictureOverlay() {
-                document.getElementById("picture-overlay").style.display = "none";
-                document.getElementById("picture-links").style.display = "none";
-                document.documentElement.style.overflow = 'scroll';
-                document.body.scroll = "yes";
-            }
-
-            function scrollToTop() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
+        <script type="text/javascript" src="functions.js"></script>
     </head>
 
     <body>
@@ -52,7 +24,8 @@
             <div class="header-parent">
                 <div class="header-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="images/logo.png"
+                                alt="logo"></a>
                     </div>
                 </div>
 
@@ -87,7 +60,8 @@
                 </div>
 
                 <div id="header-hamburger">
-                    <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
+                    <a href="#" onclick="showHamburgerOverlay()"
+                        class="fa fa-bars fa-2x"></a>
                 </div>
 
                 <div id="header-links">
@@ -120,15 +94,18 @@
             </div>
         </header>
 
-        <div id="apolloContainer">
-            <div class="top-image" style="background-image: url('images/groundcontrol.jpg');"></div>
+        <div class="top-container">
+            <div class="top-image"
+                style="background-image: url('images/groundcontrol.jpg');">
+            </div>
         </div>
 
         <div id="picture-overlay" onclick="hidePictureOverlay()">
             <div id="picture-elements">
                 <div><img id="img-overlay"></div>
                 <div><i>
-                        <h5 id="caption-overlay" style="color:white; text-align:center;"></h5>
+                        <h5 id="caption-overlay"
+                            style="color:white; text-align:center;"></h5>
                     </i></div>
             </div>
         </div>
@@ -139,30 +116,83 @@
                     <h1>GROUND CONTROL: A JOURNEY THROUGH CHESS AND SPACE</h1>
                     <h5><i>November 7, 2019</i></h5>
 
-                    <p>Organized in connection with the 50th anniversary of the Apollo 11 moon landing on July 16,1969, Ground Control: A Journey Through Chess and Space showcases out-of-this-world artifacts from the collection of the World Chess Hall of
-                        Fame (WCHOF) and lenders Duncan Pohl and Allan Savage. Ground Control also examines important chess events from 1969 including Boris Spassky’s victory in the World Chess Championship, Nona Gaprindashvili’s win in the Women’s World
-                        Chess Championship, important tournaments in the United States and around the world as well as the births of future world chess champion Viswanathan Anand and trailblazer and future women’s world chess champion Susan Polgar.</p>
+                    <p>Organized in connection with the 50th anniversary of the
+                        Apollo 11 moon landing on July 16, 1969, Ground Control:
+                        A Journey Through Chess and Space showcases
+                        out-of-this-world artifacts from the collection of the
+                        World Chess Hall of
+                        Fame (WCHOF) and lenders Duncan Pohl and Allan Savage.
+                        Ground Control also examines important chess events from
+                        1969 including Boris Spassky’s victory in the World
+                        Chess Championship, Nona Gaprindashvili’s win in the
+                        Women’s World
+                        Chess Championship, important tournaments in the United
+                        States and around the world as well as the births of
+                        future world chess champion Viswanathan Anand and
+                        trailblazer and future women’s world chess champion
+                        Susan Polgar.</p>
 
-                    <p>Just as the 1972 world chess championship match between Bobby Fischer and Boris Spassky is often seen as an embodiment of the Cold War tensions between the United States and Soviet Union, in the space race, the two nations competed
-                        for superiority in the realms of science and technology. They sought to achieve important firsts in space exploration, such as putting the first satellite into orbit, the first manned space flights, and putting a person on the
-                        moon. Some of the artifacts in Ground Control testify to the excitement of these years—a chessboard featuring a Soviet rocket blasting into space and artifacts related to a game between the cosmonauts aboard Soyuz 9 (Andrian Nikolayev
-                        and Vitaly Sevastyanov) and cosmonaut Viktor Gorbatko and general Nikolai P. Kamanin, who were on Earth.</p>
+                    <p>Just as the 1972 world chess championship match between
+                        Bobby Fischer and Boris Spassky is often seen as an
+                        embodiment of the Cold War tensions between the United
+                        States and Soviet Union, in the space race, the two
+                        nations competed
+                        for superiority in the realms of science and technology.
+                        They sought to achieve important firsts in space
+                        exploration, such as putting the first satellite into
+                        orbit, the first manned space flights, and putting a
+                        person on the
+                        moon. Some of the artifacts in Ground Control testify to
+                        the excitement of these years—a chessboard featuring a
+                        Soviet rocket blasting into space and artifacts related
+                        to a game between the cosmonauts aboard Soyuz 9 (Andrian
+                        Nikolayev
+                        and Vitaly Sevastyanov) and cosmonaut Viktor Gorbatko
+                        and general Nikolai P. Kamanin, who were on Earth.</p>
 
-                    <p>Space also has a special connection to the history of the WCHOF. One highlight of our collection, acquired after the museum moved from Miami to Saint Louis, is the chessboard flown as part of the official flight kit on the last mission
-                        of the Space Shuttle Endeavour (May 16-June 1, 2011). Competitors in the 2010 U.S. and U.S. Women’s Chess Championships, which were held at the Saint Louis Chess Club, signed the board. Also, NASA astronaut Greg Chamitoff was present
-                        at the opening festivities of the World Chess Hall of Fame, which coincided with the launch of the Boy Scouts of America Chess Merit Badge (September 11, 2011). Dr. Jeanne Sinquefield led the effort to establish the chess merit
-                        badge. Scouts reenacted a recent game between space and Earth on a life-sized board before they received the very first badges.</p>
+                    <p>Space also has a special connection to the history of the
+                        WCHOF. One highlight of our collection, acquired after
+                        the museum moved from Miami to Saint Louis, is the
+                        chessboard flown as part of the official flight kit on
+                        the last mission
+                        of the Space Shuttle Endeavour (May 16-June 1, 2011).
+                        Competitors in the 2010 U.S. and U.S. Women’s Chess
+                        Championships, which were held at the Saint Louis Chess
+                        Club, signed the board. Also, NASA astronaut Greg
+                        Chamitoff was present
+                        at the opening festivities of the World Chess Hall of
+                        Fame, which coincided with the launch of the Boy Scouts
+                        of America Chess Merit Badge (September 11, 2011). Dr.
+                        Jeanne Sinquefield led the effort to establish the chess
+                        merit
+                        badge. Scouts reenacted a recent game between space and
+                        Earth on a life-sized board before they received the
+                        very first badges.</p>
 
-                    <p>Chess is one of the world’s oldest games, but it is often featured in visions of the future and the far reaches of the galaxy. Mr. Spock played Tri-Dimensional Chess against Captain James Kirk in Star Trek, which aired from September
-                        8, 1966, through June 3, 1969. The game continued to appear in later Star Trek franchises. The WCHOF’s collection, which numbers over 1000, includes sets related to the game’s top players as well as ones with pop culture themes
-                        taken from television shows and movies set in space, including The Jetsons, Star Wars, and Star Trek. Many of these are included in Ground Control. We hope that you will enjoy this exhibition, whether you’re a space enthusiast,
+                    <p>Chess is one of the world’s oldest games, but it is often
+                        featured in visions of the future and the far reaches of
+                        the galaxy. Mr. Spock played Tri-Dimensional Chess
+                        against Captain James Kirk in Star Trek, which aired
+                        from September
+                        8, 1966, through June 3, 1969. The game continued to
+                        appear in later Star Trek franchises. The WCHOF’s
+                        collection, which numbers over 1000, includes sets
+                        related to the game’s top players as well as ones with
+                        pop culture themes
+                        taken from television shows and movies set in space,
+                        including The Jetsons, Star Wars, and Star Trek. Many of
+                        these are included in Ground Control. We hope that you
+                        will enjoy this exhibition, whether you’re a space
+                        enthusiast,
                         a pop culture junkie, or a fan of history.</p>
 
                     <div class="read-more" onclick="scrollToTop()">
-                        <p style="text-align:center; padding-top:20px;"><a href="#">Scroll to top</a></p>
+                        <p style="text-align:center; padding-top:20px;"><a
+                                href="#">Scroll to top</a></p>
                     </div>
                     <div class="read-more" onclick="scrollToTop()">
-                        <p style="text-align:center"><a href="index.html">Return to home</a></p>
+                        <p style="text-align:center"><a href="index.html">Return
+                                to home</a></p>
                     </div>
                 </article>
             </div>
@@ -188,7 +218,8 @@
 
                 <div class="footer-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a>
+                        <a href="index.html"><img src="images/logo_mini.png"
+                                alt="logo_mini"></a>
                     </div>
                 </div>
             </div>

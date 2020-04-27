@@ -2,32 +2,30 @@
     <html>
 
     <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" name="viewport"
+            content="width=device-width, initial-scale=1.0">
         <title>ISS Games</title>
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <script>
-            function showHamburgerOverlay() {
-                document.getElementById("hamburger-overlay").style.display = "flex";
-                document.getElementById("hamburger-links").style.display = "flex";
-            }
-
-            function hideHamburgerOverlay() {
-                document.getElementById("hamburger-overlay").style.display = "none";
-                document.getElementById("hamburger-links").style.display = "none";
-            }
-        </script>
+        <script type="text/javascript" src="functions.js"></script>
     </head>
 
-    <body onload="hamburgerMenu()" onresize="hamburgerMenu()">
+    <body>
         <header>
             <div class="header-parent">
                 <div class="header-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="images/logo.png"
+                                alt="logo"></a>
                     </div>
                 </div>
 
@@ -62,7 +60,8 @@
                 </div>
 
                 <div id="header-hamburger">
-                    <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
+                    <a href="#" onclick="showHamburgerOverlay()"
+                        class="fa fa-bars fa-2x"></a>
                 </div>
 
                 <div id="header-links">
@@ -95,21 +94,24 @@
             </div>
         </header>
 
-        <div id="apolloContainer">
-            <video id="apolloLaunch" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-            <source src="images/apollo.mp4" type="video/mp4">
-            Sorry, your browser does not support HTML5 video.
+        <div class="top-container">
+            <video class="top-video" preload="auto" autoplay="true" loop="loop"
+                muted="muted" volume="0">
+                <source src="images/apollo.mp4" type="video/mp4">
+                Sorry, your browser does not support HTML5 video.
             </video>
-            <div id="apolloOverlay">
+            <div class="top-overlay">
                 <div>
                     <h1>Your playground.</h1>
                 </div>
                 <div>
-                    <h2>One of the most sophisticated engineering structures built by man.</h2>
+                    <h2>One of the most sophisticated engineering structures
+                        built by man.</h2>
                 </div>
                 <div>&nbsp;</div>
                 <div>
-                    <a href="membership.html"><img src="images/joinus.png" alt="Join Us"></a>
+                    <a href="membership.html"><img src="images/joinus.png"
+                            alt="Join Us"></a>
                 </div>
                 <div><img src="images/logo_mini.png" alt="Join Us"></a>
                 </div>
@@ -122,49 +124,71 @@
             <div class="preview">
                 <a href="article-what-nasa-is-doing-covid-19.html">
                     <h1>What NASA is doing to keep COVID-19 off station</h1>
-                    <div class="preview-image"><img src="images/quarantine.jpg"></div>
+                    <div class="preview-image"><img src="images/quarantine.jpg">
+                    </div>
                 </a>
 
 
                 <h5><i>April 1, 2020</i></h5>
 
-                <p>Three astronauts are scheduled to launch to the International Space Station (ISS) on April 9. They won’t return to Earth for six months. Instead, they’ll watch from the safety of outer space as a pandemic plays out some 250 miles (400
+                <p>Three astronauts are scheduled to launch to the International
+                    Space Station (ISS) on April 9. They
+                    won’t return to Earth for six months. Instead, they’ll watch
+                    from the safety of outer space as a
+                    pandemic plays out some 250 miles (400
                     kilometers) beneath their feet.</p>
 
                 <div class="read-more">
-                    <p style="text-align:right"><a href="article-what-nasa-is-doing-covid-19.html">Read story</a></p>
+                    <p style="text-align:right"><a
+                            href="article-what-nasa-is-doing-covid-19.html">Read
+                            story</a></p>
                 </div>
             </div>
 
             <div class="preview">
                 <a href="article-ground-control-a-journey.html">
                     <h1>Ground Control: A Journey Through Chess and Space</h1>
-                    <div class="preview-image"><img src="images/groundcontrol.jpg"></div>
+                    <div class="preview-image"><img
+                            src="images/groundcontrol.jpg"></div>
                 </a>
 
 
                 <h5><i>November 7, 2019</i></h5>
 
-                <p>Organized in connection with the 50th anniversary of the Apollo 11 moon landing on July 16, 1969, Ground Control: A Journey Through Chess and Space showcases out-of-this-world artifacts from the collection of the World Chess Hall of Fame
-                    (WCHOF).</p>
+                <p>Organized in connection with the 50th anniversary of the
+                    Apollo 11 moon landing on July 16, 1969,
+                    Ground Control: A Journey Through Chess and Space showcases
+                    out-of-this-world artifacts from the
+                    collection of the World Chess Hall of Fame
+                    (WCHOF).
+                </p>
                 <div class="read-more">
-                    <p style="text-align:right"><a href="article-ground-control-a-journey.html">Read story</a></p>
+                    <p style="text-align:right"><a
+                            href="article-ground-control-a-journey.html">Read
+                            story</a></p>
                 </div>
             </div>
 
             <div class="preview">
-                <a href="article-ground-control-a-journey.html">
+                <a href="article-first-earth-vs-space-match-ends-chess-earth-wins.html">
                     <h1>First Earth vs. Space Chess Match Ends – Earth Wins</h1>
-                    <div class="preview-image"><img src="images/onboardchess.jpg"></div>
+                    <div class="preview-image"><img
+                            src="images/onboardchess.jpg"></div>
                 </a>
 
                 <h5><i>December 16, 2009</i></h5>
 
-                <p>NASA and the U.S. Chess Federation (USCF) teamed up to host the match, which started in September 2008. Chamitoff conceded the match in a Dec. 16, 2009, letter to the third grade U.S. Chess Championship Team and its chess club teammates
+                <p>NASA and the U.S. Chess Federation (USCF) teamed up to host
+                    the match, which started in September
+                    2008. Chamitoff conceded the match in a Dec. 16, 2009,
+                    letter to the third grade U.S. Chess
+                    Championship Team and its chess club teammates
                     from Stevenson Elementary School in Bellevue, Wash.</p>
 
                 <div class="read-more">
-                    <p style="text-align:right"><a href="article-first-earth-vs-space-match-ends-chess-earth-wins.html">Read story</a></p>
+                    <p style="text-align:right"><a
+                            href="article-first-earth-vs-space-match-ends-chess-earth-wins.html">Read
+                            story</a></p>
                 </div>
             </div>
 
@@ -190,7 +214,8 @@
 
                 <div class="footer-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a>
+                        <a href="index.html"><img src="images/logo_mini.png"
+                                alt="logo_mini"></a>
                     </div>
                 </div>
             </div>
