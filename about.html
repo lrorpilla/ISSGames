@@ -13,14 +13,20 @@
             function showHamburgerOverlay() {
                 document.getElementById("hamburger-overlay").style.display = "flex";
                 document.getElementById("hamburger-links").style.display = "flex";
+                document.documentElement.style.overflow = 'hidden';
+                document.body.scroll = "no";
             }
 
             function hideHamburgerOverlay() {
                 document.getElementById("hamburger-overlay").style.display = "none";
                 document.getElementById("hamburger-links").style.display = "none";
+                document.documentElement.style.overflow = 'scroll';
+                document.body.scroll = "yes";
             }
 
             function showPictureOverlay(object) {
+                document.documentElement.style.overflow = 'hidden';
+                document.body.scroll = "no";
                 document.getElementById("img-overlay").src = object.src;
                 document.getElementById("caption-overlay").innerHTML = object.alt;
                 document.getElementById("picture-overlay").style.display = "flex";
@@ -28,6 +34,8 @@
             }
 
             function hidePictureOverlay() {
+                document.documentElement.style.overflow = 'scroll';
+                document.body.scroll = "yes";
                 document.getElementById("picture-overlay").style.display = "none";
                 document.getElementById("picture-links").style.display = "none";
             }

@@ -7,21 +7,26 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script>
             function showHamburgerOverlay() {
                 document.getElementById("hamburger-overlay").style.display = "flex";
                 document.getElementById("hamburger-links").style.display = "flex";
+                document.documentElement.style.overflow = 'hidden';
+                document.body.scroll = "no";
             }
 
             function hideHamburgerOverlay() {
                 document.getElementById("hamburger-overlay").style.display = "none";
                 document.getElementById("hamburger-links").style.display = "none";
+                document.documentElement.style.overflow = 'scroll';
+                document.body.scroll = "yes";
             }
 
             function showPictureOverlay(object) {
+                document.documentElement.style.overflow = 'hidden';
+                document.body.scroll = "no";
                 document.getElementById("img-overlay").src = object.src;
                 document.getElementById("caption-overlay").innerHTML = object.alt;
                 document.getElementById("picture-overlay").style.display = "flex";
@@ -29,14 +34,16 @@
             }
 
             function hidePictureOverlay() {
+                document.documentElement.style.overflow = 'scroll';
+                document.body.scroll = "yes";
                 document.getElementById("picture-overlay").style.display = "none";
                 document.getElementById("picture-links").style.display = "none";
             }
-            
+
             function scrollToTop() {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
-            } 
+            }
         </script>
     </head>
 
@@ -44,26 +51,38 @@
         <header>
             <div class="header-parent">
                 <div class="header-logo">
-                    <div><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+                    <div>
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    </div>
                 </div>
 
                 <div id="hamburger-overlay" onclick="hideHamburgerOverlay()">
                     <div id="hamburger-links">
-                        <div><a href="index.html">
+                        <div>
+                            <a href="index.html">
                                 <h3>home</h3>
-                            </a></div>
-                        <div><a href="about.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="about.html">
                                 <h3>about</h3>
-                            </a></div>
-                        <div><a href="events.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="events.html">
                                 <h3>events</h3>
-                            </a></div>
-                        <div><a href="games.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="games.html">
                                 <h3>games</h3>
-                            </a></div>
-                        <div><a href="membership.html">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="membership.html">
                                 <h3>membership</h3>
-                            </a></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -72,21 +91,31 @@
                 </div>
 
                 <div id="header-links">
-                    <div><a href="index.html">
+                    <div>
+                        <a href="index.html">
                             <h3>home</h3>
-                        </a></div>
-                    <div><a href="about.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="about.html">
                             <h3>about</h3>
-                        </a></div>
-                    <div><a href="events.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="events.html">
                             <h3>events</h3>
-                        </a></div>
-                    <div><a href="games.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="games.html">
                             <h3>games</h3>
-                        </a></div>
-                    <div><a href="membership.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="membership.html">
                             <h3>membership</h3>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -110,32 +139,44 @@
                     <h1>WHAT NASA IS DOING TO KEEP COVID-19 OFF STATION</h1>
                     <h5><i>April 1, 2020</i></h5>
 
-                    <img src="images/nixon.jpg"
-                        alt="President Richard Nixon visits the Apollo 11 astronauts in quarantine after they returned from the Moon in 1969. "
-                        style="float:left; margin-right:10px;" onclick="showPictureOverlay(this)">
+                    <img src="images/nixon.jpg" alt="President Richard Nixon visits the Apollo 11 astronauts in quarantine after they returned from the Moon in 1969. " style="float:left; margin-right:10px;" onclick="showPictureOverlay(this)">
 
-                    <p>Three astronauts are scheduled to launch to the International Space Station (ISS) on April 9. They won’t return to Earth for six months. Instead, they’ll watch from the safety of outer space as a pandemic plays out some 250 miles (400 kilometers) beneath their feet. </p>
+                    <p>Three astronauts are scheduled to launch to the International Space Station (ISS) on April 9. They won’t return to Earth for six months. Instead, they’ll watch from the safety of outer space as a pandemic plays out some 250 miles (400
+                        kilometers) beneath their feet. </p>
 
-                    <p>Escaping Earth for six months might sound like a dream to most of humanity right now, but these spacefarers must be vigilant to avoid bringing COVID-19 aboard the ISS with them. The odds of that happening are low, but the consequences of an outbreak in orbit could have dire consequences. Medical supplies are limited on the ISS, and an emergency trip home could be both risky and tricky. So to plan for the worst, American and Russian space agencies have stepped up their preventive measures ahead of the launch of astronaut Chris Cassidy and cosmonauts Anatoly Ivanishin and Ivan Vagner. </p>
+                    <p>Escaping Earth for six months might sound like a dream to most of humanity right now, but these spacefarers must be vigilant to avoid bringing COVID-19 aboard the ISS with them. The odds of that happening are low, but the consequences
+                        of an outbreak in orbit could have dire consequences. Medical supplies are limited on the ISS, and an emergency trip home could be both risky and tricky. So to plan for the worst, American and Russian space agencies have stepped
+                        up their preventive measures ahead of the launch of astronaut Chris Cassidy and cosmonauts Anatoly Ivanishin and Ivan Vagner. </p>
 
-                    <p>These three astronauts are not the only ones scheduled for an upcoming launch, either. NASA is moving ahead with another important crew mission as early as May. Two more astronauts, Doug Hurley and Robert Behnken, will fly to the ISS aboard SpaceX’s Crew Dragon capsule. If all goes well, they’ll be the first humans to ride a private spacecraft into orbit. According to a report by CBS News, Hurley and Behnken are also already aggressively trying to limit their exposure to coronavirus.</p>
+                    <p>These three astronauts are not the only ones scheduled for an upcoming launch, either. NASA is moving ahead with another important crew mission as early as May. Two more astronauts, Doug Hurley and Robert Behnken, will fly to the ISS
+                        aboard SpaceX’s Crew Dragon capsule. If all goes well, they’ll be the first humans to ride a private spacecraft into orbit. According to a report by CBS News, Hurley and Behnken are also already aggressively trying to limit their
+                        exposure to coronavirus.</p>
 
-                    <p>Sending five humans into orbit is challenging enough under normal circumstances. But it’s harder still during a pandemic. Coronavirus concerns have already had an impact on spaceflight and space science. Several employees at NASA facilities have tested positive for COVID-19. As a result, the space agency has stepped up its response, implementing additional cleaning and social distancing measures, as well as requiring many employees to work from home.</p>
+                    <p>Sending five humans into orbit is challenging enough under normal circumstances. But it’s harder still during a pandemic. Coronavirus concerns have already had an impact on spaceflight and space science. Several employees at NASA facilities
+                        have tested positive for COVID-19. As a result, the space agency has stepped up its response, implementing additional cleaning and social distancing measures, as well as requiring many employees to work from home.</p>
 
-                    <p>What a game! Huge congratulations on your victory! I'm truly proud of you, and inspired by your dedication, focus, brilliance, and patience too! Also, a huge congratulations to all of you who followed the game and participated as part of the “Earth Team,” by voting for the moves on-line. </p>
+                    <p>What a game! Huge congratulations on your victory! I'm truly proud of you, and inspired by your dedication, focus, brilliance, and patience too! Also, a huge congratulations to all of you who followed the game and participated as part
+                        of the “Earth Team,” by voting for the moves on-line. </p>
 
                     <p>All of this has the space agency keeping an extra close eye on its astronauts.</p>
 
                     <b><p>NASA takes action to avoid COVID-19</p></b>
 
-                    <p>To stop diseases — including COVID-19 — from spreading in space, NASA and its Russian counterpart, Roscosmos, keep astronauts in quarantine for weeks before a flight. They will also complete a detailed inspection and disinfection of cargo bags.</p>
+                    <p>To stop diseases — including COVID-19 — from spreading in space, NASA and its Russian counterpart, Roscosmos, keep astronauts in quarantine for weeks before a flight. They will also complete a detailed inspection and disinfection of
+                        cargo bags.</p>
 
-                    <p>This quarantine process isn’t new, so astronauts are accustomed to such precautions. A string of space colds on early Apollo missions pushed NASA to start isolating its astronauts before launch more than half a century ago. (The Soviet Union also kept its Mir space station cosmonauts in quarantine ahead of launches.) Neil Armstrong, Buzz Aldrin, and Michael Collins even lived in their Mobile Quarantine Facility — a converted Airstream trailer — for weeks after Apollo 11 returned from the Moon. However, this quarantine wasn’t as much about protecting the astronauts as it was about NASA’s desire to avoid bringing uninvited lunar microorganisms back to Earth. </p>
-                
+                    <p>This quarantine process isn’t new, so astronauts are accustomed to such precautions. A string of space colds on early Apollo missions pushed NASA to start isolating its astronauts before launch more than half a century ago. (The Soviet
+                        Union also kept its Mir space station cosmonauts in quarantine ahead of launches.) Neil Armstrong, Buzz Aldrin, and Michael Collins even lived in their Mobile Quarantine Facility — a converted Airstream trailer — for weeks after
+                        Apollo 11 returned from the Moon. However, this quarantine wasn’t as much about protecting the astronauts as it was about NASA’s desire to avoid bringing uninvited lunar microorganisms back to Earth. </p>
+
                     <p>Those early traditions carried over to the ISS, and they still help keep astronauts from getting sick in space today.</p>
 
-                    <div class="read-more" onclick="scrollToTop()"><p style="text-align:center; padding-top:20px;"><a href="#">Scroll to top</a></p></div>
-                    <div class="read-more" onclick="scrollToTop()"><p style="text-align:center"><a href="index.html">Return to home</a></p></div>
+                    <div class="read-more" onclick="scrollToTop()">
+                        <p style="text-align:center; padding-top:20px;"><a href="#">Scroll to top</a></p>
+                    </div>
+                    <div class="read-more" onclick="scrollToTop()">
+                        <p style="text-align:center"><a href="index.html">Return to home</a></p>
+                    </div>
                 </article>
             </div>
         </section>
@@ -159,7 +200,9 @@
                 </div>
 
                 <div class="footer-logo">
-                    <div><a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a></div>
+                    <div>
+                        <a href="index.html"><img src="images/logo_mini.png" alt="logo_mini"></a>
+                    </div>
                 </div>
             </div>
         </footer>
