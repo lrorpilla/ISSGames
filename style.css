@@ -39,9 +39,19 @@ footer {
     align-items: center;
 }
 
+.header-logo img {
+    height: 60px;
+    width: auto;
+}
+
 .footer-logo {
     display: flex;
     justify-content: flex-end;
+}
+
+.footer-logo img {
+    height: 20px;
+    width: auto;
 }
 
 .footer-links {
@@ -231,7 +241,6 @@ article img:hover {
 .game h1 {
     font-family: "Roboto";
     font-weight: 100;
-    font-size: 36px;
 }
 
 .game-chess {
@@ -496,6 +505,9 @@ article img:hover {
     .member-tiers p {
         font-size: 12px;
     }
+    .game h1 {
+        font-size: 28px;
+    }
 }
 
 
@@ -594,9 +606,12 @@ article img:hover {
         flex-direction: column;
         width: 100%;
     }
-    /* Membership tiers */
+    /* Custom text sizes */
     .member-tiers p {
         font-size: 14px;
+    }
+    .game h1 {
+        font-size: 36px;
     }
 }
 
