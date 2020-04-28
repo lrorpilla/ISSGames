@@ -378,7 +378,6 @@ article img:hover {
 .member-tiers p {
     font-family: "Roboto";
     font-weight: 400;
-    font-size: 14px;
 }
 
 #tier-pawn {
@@ -493,6 +492,10 @@ article img:hover {
         flex-direction: row;
         justify-content: space-around;
     }
+    /* Membership tiers - smaller on mobile*/
+    .member-tiers p {
+        font-size: 12px;
+    }
 }
 
 
@@ -590,6 +593,10 @@ article img:hover {
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    /* Membership tiers */
+    .member-tiers p {
+        font-size: 14px;
     }
 }
 
