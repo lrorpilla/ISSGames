@@ -62,9 +62,14 @@ function scrollToTop() {
 
 /* Events page functions */
 
+function bookEvent(entry) {
+    alert("Please log in if you wish to book for an event.");
+    window.location.replace('membership.html');
+}
+
 function eventFilter(entry) {
     // Search bar element in Events page.
-    searchBar = document.getElementById("searchBar");
+    searchBar = document.getElementById("search-bar");
     // Set table value.
     searchBar.value = entry;
 
@@ -72,7 +77,7 @@ function eventFilter(entry) {
     eventSearch();
 
     // Table of events.
-    eventTable = document.getElementById("eventTable");
+    eventTable = document.getElementById("event-table");
     eventTable.scrollIntoView();
     window.scrollBy(0, -200);
 }
@@ -82,11 +87,11 @@ function eventSearch() {
     var searchBar, eventTable, results, tags;
 
     // Search bar element in Events page.
-    searchBar = document.getElementById("searchBar");
+    searchBar = document.getElementById("search-bar");
     // Table of events.
-    eventTable = document.getElementById("eventTable");
+    eventTable = document.getElementById("event-table");
     // Table of events.
-    queryCaption = document.getElementById("queryCaption");
+    queryCaption = document.getElementById("query-caption");
 
     // Get the tags of the table: event, date and destination.
     tags = eventTable.getElementsByTagName("tr");
@@ -315,7 +320,7 @@ function testAllDone() {
         // Easter egg
         document.getElementById("top-text").innerHTML = "Who dares challenge me.";
         // Discount code message
-        alert("Congratulations! You have solved all of our Elon's Greatest challenge scenarios.\n\nIf you're not up here in captivity - I mean, not dancing in festivity - then come join us at the ISS!\n\nA 10% discount will apply to your membership with the following code: EL0N1SG0D")
+        alert("Congratulations! You have solved all of our Elon's Greatest challenge scenarios.\n\nIf you're not up here in captivity - I mean, not dancing in festivity - then come join us at the ISS!\n\nA 10% discount will apply to your membership with the following code: EL0N1SG0D.")
             // Restore original text
         document.getElementById("top-text").innerHTML = "Test your mettle.";
     }
