@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>ISS Games - Games</title>
+        <title>ISS Games - Blog</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
@@ -11,16 +11,10 @@
             href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
             rel="stylesheet">
         <link
-            href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap"
             rel="stylesheet">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!-- Preload hover images, so it doesn't awkwardly load -->
-        <link rel="prefetch" href="images/game_battleship_hover.png"/>
-        <link rel="prefetch" href="images/game_chess_hover.png.png"/>
-        <link rel="prefetch" href="images/game_checkers_hover.png"/>
-        <link rel="prefetch" href="images/game_tictactoe_hover.png.png"/>
 
         <script type="text/javascript" src="functions.js"></script>
     </head>
@@ -102,110 +96,58 @@
 
         <div class="top-container">
             <div class="top-image"
-                style="background-image: url('images/games.jpg');"></div>
-            <div class="top-overlay">
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>
-                    <h1 id="top-text">Test your mettle.</h1>
-                </div>
+                style="background-image: url('images/dm2.jpg');"></div>
+        </div>
+
+        <div id="picture-overlay" onclick="hidePictureOverlay()">
+            <div id="picture-elements">
+                <div><img id="img-overlay" alt="Gallery overlay"></div>
+                <div><i>
+                        <h5 id="caption-overlay"
+                            style="color:white; text-align:center;"></h5>
+                    </i></div>
             </div>
         </div>
 
-        <map name="battleshipAnswer">
-            <area shape="rect" coords="191,220,216,247" alt="Hit"
-                style="cursor:pointer;" onclick="battleshipSuccess()">
-        </map>
+        <section>
+            <div>
+                <article>
+                    <h1>NASA to Provide Coverage of SpaceX Commercial Crew Test Flight with Astronauts</h1>
+                    <h5><i>May 2, 2020</i></h5>
 
-        <map name="chessAnswer">
-            <area shape="rect" coords="175,43,217,85" alt="Checkmate"
-                style="cursor:pointer;" onclick="chessSuccess()">
-        </map>
+                    <img src="images/bob_and_doug.jpg"
+                        alt="NASA’s SpaceX Demo-2 mission will return U.S human spaceflight to the International Space Station from U.S. soil with astronauts Robert Behnken and Douglas Hurley on an American rocket and spacecraft for the first time since 2011."
+                        style="float:left; margin-right:10px;"
+                        onclick="showPictureOverlay(this)">
 
-        <map name="checkersAnswer">
-            <area shape="rect" coords="175,131,218,174" alt="Faithful"
-                style="cursor:pointer;" onclick="checkersSuccess()">
-        </map>
+                    <p>NASA will provide coverage of the upcoming prelaunch and launch activities for the agency’s SpaceX Demo-2 test flight with NASA astronauts Robert Behnken and Douglas Hurley to the International Space Station. These activities are a part of NASA’s Commercial Crew Program, which is working with the U.S. aerospace industry to launch astronauts on American rockets and spacecraft from American soil for the first time since 2011.</p>
 
-        <map name="tictactoeAnswer">
-            <area shape="rect" coords="230,230,332,332" alt="Win"
-                style="cursor:pointer;" onclick="tictactoeSuccess()">
-        </map>
+                    <p>NASA and SpaceX are targeting 4:32 p.m. EDT Wednesday, May 27, for the launch of the Demo-2 flight, which will be the first time a commercially built and operated American rocket and spacecraft will carry humans to the space station. The launch, as well as other activities leading up to the launch, will air live on NASA Television and the agency’s website.</p>
 
-        <div id="scenario-overlay">
+                    <p>The SpaceX Crew Dragon spacecraft will launch on a Falcon 9 rocket from historic Launch Complex 39A at NASA’s Kennedy Space Center in Florida. The Crew Dragon is scheduled to dock to the space station at 11:29 a.m. Thursday, May 28.</p>
 
-            <div id="scenario-elements">
-                <div>
-                    <img src="images/logo_mini.png" alt="ISS Logo"
-                        style="max-width: 50px;">
-                    <h1 id="scenario-name"></h1>
-                    <img id="scenario-image" alt="Scenario image">
+                    <p>This will be SpaceX’s final test flight of NASA’s Commercial Crew Program and will provide data on the performance of the Falcon 9 rocket, Crew Dragon spacecraft and ground systems, as well as in-orbit, docking and landing operations.</p>
 
-                    <div id="read-more" onclick="hideScenario()">
-                        <i>
-                            <p id="scenario-description"
-                                style="font-size:12px;color:rgb(194, 194, 194);">
-                            </p>
-                        </i>
-                        <a href="#/">
-                            <h2 id="close-button"
-                                style="text-align:center;font-weight:400;">
-                                [close scenario]</h2>
-                        </a>
+                    <p>The test flight also will provide valuable data toward NASA certifying SpaceX’s crew transportation system for regular flights carrying astronauts to and from the space station. SpaceX currently is readying the hardware for the first rotational mission, which would happen after data from this mission is reviewed for NASA’s certification.
+                    </p>
+
+                    <p>All media participation in these news conferences will be remote except where specifically listed below; only a limited number of media will be accommodated at Kennedy due to the COVID-19 pandemic. Media who will be accommodated in person for specific events will be notified in writing in the coming days. Please note that the Kennedy Press Site News Center facilities will remain closed to all media throughout these events for the protection of Kennedy employees and journalists.</p>
+
+                    <p>The goal of NASA’s Commercial Crew Program is safe, reliable and cost-effective transportation to and from the International Space Station. This could allow for additional research time and increase the opportunity for discovery aboard humanity’s testbed for exploration, including helping us prepare for human exploration of the Moon and Mars.</p>
+
+                    <div class="read-more"><h5><i><a href="https://www.nasa.gov/press-release/nasa-to-provide-coverage-of-spacex-commercial-crew-test-flight-with-astronauts">This is an article taken from NASA.gov. Under United States copyright law, works created by the U.S. federal government or its agencies cannot be copyrighted.</a></i></h5></div>
+
+                    <div class="read-more" onclick="scrollToTop()">
+                        <p style="text-align:center; padding-top:20px;"><a
+                                href="#">Scroll to top</a></p>
                     </div>
-                </div>
+                    <div class="read-more" onclick="scrollToTop()">
+                        <p style="text-align:center"><a href="index.html">Return
+                                to home</a></p>
+                    </div>
+                </article>
             </div>
-        </div>
-
-        <article>
-            <h1>SELECT A GAME</h1>
-            <h5><i>Take your pick from one of four classic hits that we play
-                    regularly. Emerge victorious from a
-                    challenge scenario and you will be aptly rewarded. These are
-                    only a glimpse of the International
-                    Space Station Games Club's greatest and most historical
-                    moments.</i></h5>
-
-            <div class="games-grid">
-                <div class="game game-battleship"
-                    onclick="showBattleshipScenario()">
-                    <div>
-                        <h1 id="status-battleship">Battleship</h1>
-                    </div>
-                </div>
-                <div class="game game-chess" onclick="showChessScenario()">
-                    <div>
-                        <h1 id="status-chess">Chess</h1>
-                    </div>
-                </div>
-                <div class="game game-checkers"
-                    onclick="showCheckersScenario()">
-                    <div>
-                        <h1 id="status-checkers">Checkers</h1>
-                    </div>
-                </div>
-                <div class="game game-tictactoe"
-                    onclick="showTicTacToeScenario()">
-                    <div>
-                        <h1 id="status-tictactoe">Tic-Tac-Toe</h1>
-                    </div>
-                </div>
-            </div>
-
-            <p>At ISS Games, we play four main classic tabletop games:
-                Battleship, Chess, Checkers and Tic-Tac-Toe. Each
-                has their own difficulty and learning curve.</p>
-
-            <p>There are many more games that we play irregularly - should Lord
-                Elon allow it. The moment we beat him
-                (his AI stand-in) in any, those games are, in the same speed
-                instantly banned from the roster. In
-                addition, beating our lord and saviour
-                from any of the following games awards you a lifetime of
-                servitude aboard the International Space
-                Station - a rare honour.</p>
-        </article>
+        </section>
 
         <footer>
             <div id="footer-parent">

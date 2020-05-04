@@ -57,7 +57,7 @@ footer {
 .footer-links {
     display: flex;
     justify-content: space-between;
-    width: 200px;
+    width: 250px;
 }
 
 .footer-social {
@@ -485,6 +485,9 @@ article img:hover {
         justify-content: space-between;
         align-items: center;
     }
+    .footer-social {
+        height: 50px;
+    }
     /* Events page different layout in mobile */
     .eventParent {
         display: flex;
@@ -654,22 +657,42 @@ h5 {
 
 /* Hyperlink colors for different IDs and classes */
 
-a:link {
+header a:link {
     color: white;
     text-decoration: none
 }
 
-a:visited {
+header a:visited {
     color: white;
     text-decoration: none
 }
 
-a:active {
+header a:active {
     color: white;
     text-decoration: none
 }
 
-a:hover {
+header a:hover {
+    color: #C1C1C1;
+    text-decoration: none
+}
+
+footer a:link {
+    color: white;
+    text-decoration: none
+}
+
+footer a:visited {
+    color: white;
+    text-decoration: none
+}
+
+footer a:active {
+    color: white;
+    text-decoration: none
+}
+
+footer a:hover {
     color: #C1C1C1;
     text-decoration: none
 }
