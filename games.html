@@ -6,21 +6,16 @@
         <title>ISS Games - Games</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-        <link
-            href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Preload hover images, so it doesn't awkwardly load -->
-        <link rel="prefetch" href="images/game_battleship_hover.png"/>
-        <link rel="prefetch" href="images/game_chess_hover.png.png"/>
-        <link rel="prefetch" href="images/game_checkers_hover.png"/>
-        <link rel="prefetch" href="images/game_tictactoe_hover.png.png"/>
+        <link rel="prefetch" href="images/game_battleship_hover.png" />
+        <link rel="prefetch" href="images/game_chess_hover.png.png" />
+        <link rel="prefetch" href="images/game_checkers_hover.png" />
+        <link rel="prefetch" href="images/game_tictactoe_hover.png.png" />
 
         <script type="text/javascript" src="functions.js"></script>
     </head>
@@ -30,8 +25,7 @@
             <div class="header-parent">
                 <div class="header-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo.png"
-                                alt="logo"></a>
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                     </div>
                 </div>
 
@@ -66,8 +60,7 @@
                 </div>
 
                 <div id="header-hamburger">
-                    <a href="#" onclick="showHamburgerOverlay()"
-                        class="fa fa-bars fa-2x"></a>
+                    <a href="#" onclick="showHamburgerOverlay()" class="fa fa-bars fa-2x"></a>
                 </div>
 
                 <div id="header-links">
@@ -101,8 +94,7 @@
         </header>
 
         <div class="top-container">
-            <div class="top-image"
-                style="background-image: url('images/games.jpg');"></div>
+            <div class="top-image" style="background-image: url('images/games.jpg');"></div>
             <div class="top-overlay">
                 <div>&nbsp;</div>
                 <div>&nbsp;</div>
@@ -137,8 +129,7 @@
 
             <div id="scenario-elements">
                 <div>
-                    <img src="images/logo_mini.png" alt="ISS Logo"
-                        style="max-width: 50px;">
+                    <img src="images/logo_mini.png" alt="ISS Logo" style="max-width: 50px;">
                     <h1 id="scenario-name"></h1>
                     <img id="scenario-image" alt="Scenario image">
 
@@ -148,11 +139,12 @@
                                 style="font-size:12px;color:rgb(194, 194, 194);">
                             </p>
                         </i>
-                        <a href="#/">
-                            <h2 id="close-button"
-                                style="text-align:center;font-weight:400;">
-                                [close scenario]</h2>
-                        </a>
+                        <div class="preview">
+                            <a href="#/">
+                                <h2 id="close-button" style="text-align:center;font-weight:400;">
+                                    [close scenario]</h2>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,8 +160,7 @@
                     moments.</i></h5>
 
             <div class="games-grid">
-                <div class="game game-battleship"
-                    onclick="showBattleshipScenario()">
+                <div class="game game-battleship" onclick="showBattleshipScenario()">
                     <div>
                         <h1 id="status-battleship">Battleship</h1>
                     </div>
@@ -179,32 +170,23 @@
                         <h1 id="status-chess">Chess</h1>
                     </div>
                 </div>
-                <div class="game game-checkers"
-                    onclick="showCheckersScenario()">
+                <div class="game game-checkers" onclick="showCheckersScenario()">
                     <div>
                         <h1 id="status-checkers">Checkers</h1>
                     </div>
                 </div>
-                <div class="game game-tictactoe"
-                    onclick="showTicTacToeScenario()">
+                <div class="game game-tictactoe" onclick="showTicTacToeScenario()">
                     <div>
                         <h1 id="status-tictactoe">Tic-Tac-Toe</h1>
                     </div>
                 </div>
             </div>
 
-            <p>At ISS Games, we play four main classic tabletop games:
-                Battleship, Chess, Checkers and Tic-Tac-Toe. Each
-                has their own difficulty and learning curve.</p>
+            <p>At ISS Games, we play four main classic tabletop games: Battleship, Chess, Checkers and Tic-Tac-Toe. Each has their own difficulty and learning curve.</p>
 
-            <p>There are many more games that we play irregularly - should Lord
-                Elon allow it. The moment we beat him
-                (his AI stand-in) in any, those games are, in the same speed
-                instantly banned from the roster. In
-                addition, beating our lord and saviour
-                from any of the following games awards you a lifetime of
-                servitude aboard the International Space
-                Station - a rare honour.</p>
+            <p>There are many more games that we play irregularly - should Lord Elon allow it. The moment we beat him (his AI stand-in) in any, those games are, in the same speed instantly banned from the roster. In addition, beating our lord and saviour
+                from any of the following games awards you a lifetime of servitude aboard the International Space Station - a rare honour.
+            </p>
         </article>
 
         <footer>
@@ -212,11 +194,11 @@
                 <div class="footer-links">
                     <a href="tel:49-3566">
                         <h4>call us</h4>
-                    <a href="mailto:contact@issgames.com">
+                        <a href="mailto:contact@issgames.com">
                             <h4>email us</h4>
-                    <a href="privacy.html">
-                        <h4>privacy policy</h4>
-                    </a>
+                            <a href="privacy.html">
+                                <h4>privacy policy</h4>
+                            </a>
                 </div>
 
                 <div class="footer-social">
@@ -228,8 +210,7 @@
 
                 <div class="footer-logo">
                     <div>
-                        <a href="index.html"><img src="images/logo.png"
-                            alt="logo"></a>
+                        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                     </div>
                 </div>
             </div>
