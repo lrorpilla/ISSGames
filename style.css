@@ -155,7 +155,6 @@ article img:hover {
     filter: brightness(130%);
 }
 
-
 .preview-image img {
     width: 100%;
     height: auto;
@@ -188,6 +187,7 @@ article img:hover {
     padding-right: 10%;
 }
 
+
 /* Events page */
 
 .event-filters img {
@@ -205,6 +205,7 @@ article img:hover {
     font-size: 12px;
     cursor: pointer;
 }
+
 
 /* Games page */
 
@@ -304,6 +305,7 @@ article img:hover {
     margin: auto;
     max-width: 100%;
 }
+
 
 /* Membership page */
 
@@ -697,6 +699,26 @@ footer a:hover {
     text-decoration: none
 }
 
+.close-scenario a:link {
+    color: white;
+    text-decoration: none
+}
+
+.close-scenario a:visited {
+    color: white;
+    text-decoration: none
+}
+
+.close-scenario a:active {
+    color: white;
+    text-decoration: none
+}
+
+.close-scenario a:hover {
+    color: #C1C1C1;
+    text-decoration: none
+}
+
 .preview a:link {
     color: black;
     text-decoration: none
@@ -756,6 +778,7 @@ table a:hover {
     color: #FF0000;
     text-decoration: underline
 }
+
 
 /* Font Awesome icons */
 
